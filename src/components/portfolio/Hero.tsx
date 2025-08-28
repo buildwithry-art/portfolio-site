@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 import automationIcon from "@/assets/automation-icon.png";
+import adrianPhoto from "@/assets/adrian-photo.png";
 
 const Hero = () => {
   return (
@@ -64,13 +65,22 @@ const Hero = () => {
               {/* Background decoration */}
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
               
-              {/* Main icon container */}
-              <div className="relative bg-white p-12 rounded-3xl shadow-strong hover-glow animate-float">
+              {/* Main photo container */}
+              <div className="relative">
                 <img 
-                  src={automationIcon}
-                  alt="Automation workflows" 
-                  className="w-48 h-48 object-contain"
+                  src={adrianPhoto}
+                  alt="Adrian - Automation Specialist" 
+                  className="w-80 h-80 object-cover rounded-3xl shadow-strong hover-glow"
                 />
+                
+                {/* Automation icon overlay */}
+                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-strong animate-float">
+                  <img 
+                    src={automationIcon}
+                    alt="Automation workflows" 
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
               </div>
               
               {/* Floating elements */}
