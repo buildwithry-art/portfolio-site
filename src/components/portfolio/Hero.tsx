@@ -1,105 +1,91 @@
 import { Button } from "@/components/ui/button";
-import { Zap } from "lucide-react";
-import ParticleBackground from "../ParticleBackground";
+import { ArrowRight, Calendar } from "lucide-react";
+import automationIcon from "@/assets/automation-icon.png";
+
 const Hero = () => {
-  return <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Background with particles */}
-      <div className="absolute inset-0 hero-bg-light dark:hero-bg-dark">
-        <ParticleBackground isDark={false} />
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 px-4 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-left space-y-8">
-            {/* Logo */}
-            <div className="flex items-center gap-2 mb-8">
-              <Zap className="h-8 w-8 text-primary" />
-              <span className="text-lg font-semibold text-muted-foreground tracking-wide">BUILD WITH RY</span>
-            </div>
-            
-            {/* Main Headlines */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="text-foreground">Automation</span><br />
-                <span className="text-gradient">Specialist</span>
+  return (
+    <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-background via-muted/30 to-background">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div className="text-center lg:text-left">
+            <div className="mb-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                I help businesses 
+                <span className="text-gradient block">
+                  automate workflows
+                </span>
+                and scale without extra staff
               </h1>
               
-              <p className="text-xl text-muted-foreground">
-                Go High Level | AI Workflow Builder | Process Analyst
-              </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                I build smart automations and scalable systems that save time and boost revenue.
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Specialist in <span className="font-semibold text-primary">GoHighLevel</span>, <span className="font-semibold text-primary">Zapier</span>, <span className="font-semibold text-primary">Make</span>, and <span className="font-semibold text-primary">n8n</span> — turning manual tasks into seamless, revenue-driving systems.
               </p>
             </div>
             
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="gradient" size="lg" className="text-lg px-8 py-6">
-                See My Work →
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 hover-lift bg-primary hover:bg-primary-hover text-primary-foreground font-semibold"
+              >
+                Work With Me
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 glass">
-                Book a Call
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 py-6 hover-lift border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
+              >
+                Book a Free Strategy Call
+                <Calendar className="ml-2 h-5 w-5" />
               </Button>
             </div>
             
             {/* Stats */}
-            <div className="flex flex-col sm:flex-row gap-8 pt-8">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <div>
-                  <div className="font-bold text-foreground">+50 automations</div>
-                  <div className="text-sm text-muted-foreground">shipped</div>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto lg:mx-0">
+              <div className="text-center lg:text-left">
+                <h3 className="text-3xl font-bold text-primary mb-1">500+</h3>
+                <p className="text-muted-foreground font-medium">Hours Saved</p>
               </div>
-              
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <div>
-                  <div className="font-bold text-foreground">70% avg time</div>
-                  <div className="text-sm text-muted-foreground">saved</div>
-                </div>
+              <div className="text-center lg:text-left">
+                <h3 className="text-3xl font-bold text-primary mb-1">95%</h3>
+                <p className="text-muted-foreground font-medium">Error Reduction</p>
               </div>
-              
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <div>
-                  <div className="font-bold text-foreground">30 pipelines</div>
-                  <div className="text-sm text-muted-foreground">optimized</div>
-                </div>
+              <div className="text-center lg:text-left">
+                <h3 className="text-3xl font-bold text-primary mb-1">$2M+</h3>
+                <p className="text-muted-foreground font-medium">Revenue Generated</p>
               </div>
             </div>
           </div>
           
-          {/* Right Content - Photo */}
+          {/* Visual */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Decorative elements */}
-              <div className="absolute -top-8 -right-8 w-16 h-16 bg-primary/20 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+              {/* Background decoration */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
               
-              {/* Photo container with glassmorphism */}
-              <div className="glass rounded-3xl p-6 max-w-md">
-                <img src="/lovable-uploads/b747310d-2df7-4980-993c-8288fac79877.png" alt="Adrian Agdan - Automation Specialist" className="w-full h-auto rounded-2xl object-cover" />
+              {/* Main icon container */}
+              <div className="relative bg-white p-12 rounded-3xl shadow-strong hover-glow animate-float">
+                <img 
+                  src={automationIcon}
+                  alt="Automation workflows" 
+                  className="w-48 h-48 object-contain"
+                />
               </div>
               
-              {/* Floating badge */}
-              <div className="absolute -bottom-6 -right-6">
-                <div className="glass rounded-full p-4 bg-primary/10">
-                  <Zap className="h-8 w-8 text-primary" />
-                </div>
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-medium animate-bounce">
+                24/7 Automation
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-medium" style={{animationDelay: '1s'}}>
+                Seamless Integration
               </div>
             </div>
           </div>
         </div>
-        
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          
-        </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
