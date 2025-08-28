@@ -1,7 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ExternalLink, Github, Zap, Eye } from "lucide-react";
+import { useState } from "react";
+import ghlAutomation from "@/assets/ghl-automation.jpg";
+import makeAutomation from "@/assets/make-automation.jpg";
+import n8nAutomation from "@/assets/n8n-automation.jpg";
 
 const projects = [
   {
@@ -17,7 +22,18 @@ const projects = [
     category: "Lead Generation",
     client: "Digital Marketing Agency",
     problem: "Leads from Facebook Ads were being manually entered into CRM, causing delays and missed opportunities.",
-    solution: "Integrated Facebook Lead Ads → Zapier → GoHighLevel CRM with automated follow-up sequences and pipeline tracking."
+    solution: "Integrated Facebook Lead Ads → Zapier → GoHighLevel CRM with automated follow-up sequences and pipeline tracking.",
+    automationImage: ghlAutomation,
+    platform: "GoHighLevel + Zapier",
+    detailedWorkflow: [
+      "Facebook Lead Ad captures prospect information",
+      "Zapier instantly triggers and sends data to GoHighLevel CRM",
+      "Contact is automatically tagged and assigned to sales pipeline",
+      "SMS sequence launches within 1 minute of form submission",
+      "Email nurture sequence begins simultaneously",
+      "Sales team receives real-time Slack notification",
+      "Follow-up tasks automatically created in CRM"
+    ]
   },
   {
     title: "E-commerce Order Management System",
@@ -32,7 +48,19 @@ const projects = [
     category: "E-commerce",
     client: "Online Store Owner",
     problem: "Orders were being tracked manually, making it difficult to manage inventory and reporting.",
-    solution: "Built Make scenario: Shopify → Google Sheets → Slack with daily sales updates and inventory alerts."
+    solution: "Built Make scenario: Shopify → Google Sheets → Slack with daily sales updates and inventory alerts.",
+    automationImage: makeAutomation,
+    platform: "Make.com + Shopify",
+    detailedWorkflow: [
+      "New order placed on Shopify store",
+      "Make.com scenario automatically triggered",
+      "Order details instantly logged to Google Sheets",
+      "Inventory levels updated in real-time",
+      "Slack notification sent to fulfillment team",
+      "Daily sales report generated automatically",
+      "Low stock alerts trigger when inventory < 10 units",
+      "Weekly performance summary emailed to owner"
+    ]
   },
   {
     title: "Multi-Platform SaaS Workflow",
@@ -47,7 +75,19 @@ const projects = [
     category: "SaaS Automation",
     client: "SaaS Founder",
     problem: "Customer onboarding was messy—payments, team notifications, and documentation were handled separately.",
-    solution: "Built n8n workflow: Stripe payment → Notion database → Slack channel → Welcome email automation."
+    solution: "Built n8n workflow: Stripe payment → Notion database → Slack channel → Welcome email automation.",
+    automationImage: n8nAutomation,
+    platform: "n8n + Stripe",
+    detailedWorkflow: [
+      "Customer completes Stripe payment successfully",
+      "n8n webhook receives payment confirmation",
+      "New customer record created in Notion database",
+      "Welcome email with login credentials sent automatically",
+      "Slack notification posted to #new-customers channel",
+      "Onboarding task list generated in Notion",
+      "Customer added to appropriate email sequences",
+      "Account provisioning completed automatically"
+    ]
   }
 ];
 
@@ -134,10 +174,92 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-2 pt-2">
-                  <Button variant="outline" size="sm" className="glass group-hover:border-primary smooth-animation">
-                    <ExternalLink className="h-4 w-4" />
-                    View Full Case Study
-                  </Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="sm" className="glass group-hover:border-primary smooth-animation">
+                        <Eye className="h-4 w-4" />
+                        View Full Case Study
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center gap-2 text-2xl">
+                          <Zap className="h-6 w-6 text-primary" />
+                          {project.title}
+                        </DialogTitle>
+                        <DialogDescription className="text-base">
+                          <Badge variant="outline" className="mr-2">{project.platform}</Badge>
+                          Built for {project.client}
+                        </DialogDescription>
+                      </DialogHeader>
+                      
+                      <div className="space-y-6">
+                        {/* Automation Screenshot */}
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                            <img src="/placeholder.svg" className="w-5 h-5" alt="Platform" />
+                            Live Automation Build
+                          </h3>
+                          <div className="rounded-lg overflow-hidden border border-border">
+                            <img 
+                              src={project.automationImage} 
+                              alt={`${project.platform} automation workflow`}
+                              className="w-full h-auto"
+                            />
+                          </div>
+                          <p className="text-sm text-muted-foreground mt-2">
+                            Screenshot of the actual automation workflow built on {project.platform}
+                          </p>
+                        </div>
+
+                        {/* Detailed Workflow */}
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3">🔄 Step-by-Step Workflow</h3>
+                          <div className="space-y-2">
+                            {project.detailedWorkflow.map((step, idx) => (
+                              <div key={idx} className="flex items-start gap-3 p-3 rounded-md bg-muted/30">
+                                <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                                  {idx + 1}
+                                </div>
+                                <span className="text-sm">{step}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Results Highlight */}
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/20">
+                            <h4 className="font-semibold text-destructive mb-2">❌ Before Automation</h4>
+                            <p className="text-sm">{project.problem}</p>
+                          </div>
+                          <div className="p-4 rounded-lg bg-green-500/10 border border-green-500/20">
+                            <h4 className="font-semibold text-green-600 mb-2">✅ After Automation</h4>
+                            <ul className="text-sm space-y-1">
+                              {project.features.map((feature, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <div className="w-1 h-1 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+
+                        {/* Tech Stack */}
+                        <div>
+                          <h3 className="text-lg font-semibold mb-3">🛠️ Technology Stack</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, idx) => (
+                              <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </CardContent>
             </Card>
