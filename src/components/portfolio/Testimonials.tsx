@@ -71,7 +71,7 @@ const Testimonials = () => {
             }
           }}
         >
-          <div className="testimonials-slider flex gap-8 animate-scroll-right">
+          <div className="testimonials-slider flex gap-8 animate-[scroll-right_30s_linear_infinite]">
             {doubledTestimonials.map((testimonial, index) => (
               <Card 
                 key={index} 
