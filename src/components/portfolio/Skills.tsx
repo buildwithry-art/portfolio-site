@@ -29,18 +29,18 @@ const skillCategories = [
 ];
 
 const toolLogos = [
-  { name: "Make", logo: "🔧", color: "text-purple-500" },
-  { name: "Zapier", logo: "⚡", color: "text-orange-500" },
-  { name: "GoHighLevel", logo: "🚀", color: "text-blue-500" },
-  { name: "n8n", logo: "🔗", color: "text-red-500" },
-  { name: "Supabase", logo: "⚡", color: "text-green-500" },
-  { name: "Airtable", logo: "📊", color: "text-yellow-500" },
-  { name: "Shopify", logo: "🛒", color: "text-green-600" },
+  { name: "Make", logo: "/lovable-uploads/f15c7435-1271-49b9-bdad-f8a3d32a0d96.png", isImage: true },
+  { name: "Zapier", logo: "/lovable-uploads/30c27be1-6af6-4eab-90b2-91c98060f650.png", isImage: true },
+  { name: "GoHighLevel", logo: "/lovable-uploads/0340a356-7341-4d91-862e-5c9c3cab01a6.png", isImage: true },
+  { name: "n8n", logo: "/lovable-uploads/6e12685c-34f7-44fe-bef9-12d0c1765d6f.png", isImage: true },
+  { name: "Supabase", logo: "/lovable-uploads/28e33830-2f7f-4317-8769-e4b54b84f5f9.png", isImage: true },
+  { name: "Airtable", logo: "/lovable-uploads/9d61a20f-77c0-4679-a084-d08f05736bff.png", isImage: true },
+  { name: "Shopify", logo: "/lovable-uploads/1ff04e66-8787-43cc-8330-a31015e5fb5f.png", isImage: true },
   { name: "Stripe", logo: "💳", color: "text-purple-600" },
-  { name: "Twilio", logo: "📱", color: "text-red-600" },
+  { name: "Twilio", logo: "/lovable-uploads/32132918-0f6f-4ca8-bd1e-41fca3828fe0.png", isImage: true },
   { name: "Canva", logo: "🎨", color: "text-cyan-500" },
-  { name: "Slack", logo: "💬", color: "text-purple-400" },
-  { name: "Asana", logo: "✅", color: "text-pink-500" }
+  { name: "Slack", logo: "/lovable-uploads/729b14df-7b5c-478f-a162-f79980da1ac1.png", isImage: true },
+  { name: "Asana", logo: "/lovable-uploads/0430b2e9-867b-484e-b727-9f05b427238a.png", isImage: true }
 ];
 
 const Skills = () => {
@@ -67,8 +67,18 @@ const Skills = () => {
                 >
                   <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg smooth-animation hover:scale-110 glass">
                     <div className="text-center">
-                      <div className={`text-4xl mb-2 ${tool.color} group-hover:scale-125 smooth-animation`}>
-                        {tool.logo}
+                      <div className="h-12 w-12 mx-auto mb-2 group-hover:scale-125 smooth-animation flex items-center justify-center">
+                        {tool.isImage ? (
+                          <img 
+                            src={tool.logo} 
+                            alt={tool.name} 
+                            className="h-full w-full object-contain"
+                          />
+                        ) : (
+                          <div className={`text-4xl ${tool.color}`}>
+                            {tool.logo}
+                          </div>
+                        )}
                       </div>
                       <span className="text-sm font-medium text-foreground group-hover:text-primary smooth-animation">
                         {tool.name}
