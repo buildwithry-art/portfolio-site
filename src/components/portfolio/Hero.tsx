@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Lightbulb } from "lucide-react";
 import automationIcon from "@/assets/automation-icon.png";
 import adrianPhoto from "/lovable-uploads/892fb2d8-1fb5-4b9c-9831-7db3e194f5e9.png";
 
@@ -72,6 +72,13 @@ const Hero = () => {
                   alt="Adrian - Automation Specialist" 
                   className="w-96 h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
+                
+                {/* AHA moment thinking icon */}
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
+                  <div className="bg-blue-500 rounded-full p-2 shadow-lg animate-bounce">
+                    <Lightbulb className="w-6 h-6 text-white" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
