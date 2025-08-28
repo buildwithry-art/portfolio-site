@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Zap } from "lucide-react";
 import ParticleBackground from "../ParticleBackground";
+import adrianPhoto from "@/assets/adrian-photo.png";
 
 const Hero = () => {
   return (
@@ -11,35 +12,93 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        {/* Logo */}
-        <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-foreground flex items-center justify-center gap-2">
-            Build with RY
-            <Zap className="h-8 w-8 text-primary" />
-          </h1>
-        </div>
-        
-        {/* Glassmorphism container */}
-        <div className="glass rounded-2xl p-8 md:p-12 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient">
-            Adrian Agdan
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            GoHighLevel & Automation Specialist
-          </p>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Transforming businesses through intelligent automation workflows, 
-            lead generation systems, and seamless integrations with cutting-edge tools.
-          </p>
+      <div className="relative z-10 px-4 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-left space-y-8">
+            {/* Logo */}
+            <div className="flex items-center gap-2 mb-8">
+              <Zap className="h-8 w-8 text-primary" />
+              <span className="text-lg font-semibold text-muted-foreground tracking-wide">BUILD WITH RY</span>
+            </div>
+            
+            {/* Main Headlines */}
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                <span className="text-foreground">Automation</span><br />
+                <span className="text-gradient">Specialist</span>
+              </h1>
+              
+              <p className="text-xl text-muted-foreground">
+                Go High Level | AI Workflow Builder | Process Analyst
+              </p>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+                I build smart automations and scalable systems that save time and boost revenue.
+              </p>
+            </div>
+            
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="gradient" size="lg" className="text-lg px-8 py-6">
+                See My Work →
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 glass">
+                Book a Call
+              </Button>
+            </div>
+            
+            {/* Stats */}
+            <div className="flex flex-col sm:flex-row gap-8 pt-8">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div>
+                  <div className="font-bold text-foreground">+50 automations</div>
+                  <div className="text-sm text-muted-foreground">shipped</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div>
+                  <div className="font-bold text-foreground">70% avg time</div>
+                  <div className="text-sm text-muted-foreground">saved</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div>
+                  <div className="font-bold text-foreground">30 pipelines</div>
+                  <div className="text-sm text-muted-foreground">optimized</div>
+                </div>
+              </div>
+            </div>
+          </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-              View My Work
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 glass">
-              Get In Touch
-            </Button>
+          {/* Right Content - Photo */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Decorative elements */}
+              <div className="absolute -top-8 -right-8 w-16 h-16 bg-primary/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+              
+              {/* Photo container with glassmorphism */}
+              <div className="glass rounded-3xl p-6 max-w-md">
+                <img
+                  src={adrianPhoto}
+                  alt="Adrian Agdan - Automation Specialist"
+                  className="w-full h-auto rounded-2xl object-cover"
+                />
+              </div>
+              
+              {/* Floating badge */}
+              <div className="absolute -bottom-6 -right-6">
+                <div className="glass rounded-full p-4 bg-primary/10">
+                  <Zap className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
