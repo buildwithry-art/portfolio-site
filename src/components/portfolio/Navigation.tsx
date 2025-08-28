@@ -52,9 +52,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <h1 className="font-futuristic text-xl font-bold text-foreground flex items-center gap-2 tracking-wider">
+            <h1 className="font-futuristic text-xl font-bold text-foreground flex items-center gap-2 tracking-wider animate-lightning-strike">
               BUILD WITH RY
-              <Zap className="h-6 w-6 text-primary zap-spark cursor-pointer" />
+              <Zap className="h-6 w-6 text-primary animate-zap-glow cursor-pointer" />
             </h1>
           </div>
 
