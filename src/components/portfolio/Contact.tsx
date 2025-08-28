@@ -47,15 +47,17 @@ const Contact = () => {
               </a>
               
               <a 
-                href="mailto:adrian@buildwithry.com" 
+                href="https://www.onlinejobs.ph/jobseekers/info/1611430" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
+                  <img src="/lovable-uploads/aaf7be47-a9c5-4bf6-9986-5f137ce5cfb4.png" alt="OnlineJobs.ph" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <div className="font-semibold">Gmail</div>
-                  <div className="text-muted-foreground">Send me an email</div>
+                  <div className="font-semibold">OnlineJobs.ph</div>
+                  <div className="text-muted-foreground">View my OnlineJobs.ph profile</div>
                 </div>
               </a>
               
@@ -75,29 +77,17 @@ const Contact = () => {
               </a>
               
               <a 
-                href="https://www.onlinejobs.ph/jobseekers/info/1611430" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="mailto:adrian@buildwithry.com" 
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
                 </div>
                 <div>
-                  <div className="font-semibold">OnlineJobs.ph</div>
-                  <div className="text-muted-foreground">View my OnlineJobs.ph profile</div>
+                  <div className="font-semibold">Email</div>
+                  <div className="text-muted-foreground">Send me an email</div>
                 </div>
               </a>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <div className="font-semibold">Location</div>
-                  <div className="text-muted-foreground">Remote • Global Projects</div>
-                </div>
-              </div>
             </div>
           </div>
           
