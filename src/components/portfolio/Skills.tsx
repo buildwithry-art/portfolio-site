@@ -67,15 +67,15 @@ const Skills = () => {
                 >
                   <div className="bg-white rounded-xl p-6 hover:shadow-lg smooth-animation hover:scale-110 border border-gray-200/20">
                     <div className="flex items-center justify-center">
-                      <div className="h-16 w-16 group-hover:scale-125 smooth-animation flex items-center justify-center">
+                      <div className="h-16 w-16 group-hover:scale-125 smooth-animation flex items-center justify-center bg-white rounded-lg">
                         {tool.isImage ? (
                           <img 
                             src={tool.logo} 
                             alt={tool.name} 
-                            className="h-full w-full object-contain"
+                            className="h-12 w-12 object-contain"
                             style={{ 
                               imageRendering: 'crisp-edges',
-                              background: 'transparent'
+                              background: 'white'
                             }}
                           />
                         ) : (
