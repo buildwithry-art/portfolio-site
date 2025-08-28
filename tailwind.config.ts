@@ -22,6 +22,7 @@ export default {
 				'ubuntu': ['Ubuntu', 'sans-serif'],
 				'colfax': ['Inter', 'sans-serif'], // Using Inter as Colfax alternative
 				'futuristic': ['Orbitron', 'sans-serif'], // For "Build with RY" logo
+				'anonymous': ['Anonymous Pro', 'monospace'], // For typewriter effect
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -143,6 +144,14 @@ export default {
 						opacity: '0',
 						transform: 'scale(0)'
 					}
+				},
+				'typewriter': {
+					from: { width: '0' },
+					to: { width: '100%' }
+				},
+				'blinkingCursor': {
+					from: { borderRightColor: 'rgba(255,255,255,0.75)' },
+					to: { borderRightColor: 'transparent' }
 				}
 			},
 			animation: {
@@ -150,7 +159,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'lightning-strike': 'lightning-strike 4s ease-in-out infinite',
 				'zap-glow': 'zap-glow 4s ease-in-out infinite',
-				'crack-flash': 'crack-flash 4s ease-in-out infinite'
+				'crack-flash': 'crack-flash 4s ease-in-out infinite',
+				'typewriter': 'typewriter 5s steps(50) 1s 1 normal both, blinkingCursor 500ms steps(50) infinite normal',
+				'blinking-cursor': 'blinkingCursor 500ms steps(50) infinite normal'
 			}
 		}
 	},

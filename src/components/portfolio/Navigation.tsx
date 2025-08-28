@@ -53,7 +53,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="relative">
-              <h1 className="font-futuristic text-xl font-bold text-foreground flex items-center gap-2 tracking-wider animate-lightning-strike relative z-10">
+              <h1 className="font-anonymous text-xl font-bold text-foreground flex items-center gap-2 tracking-wider relative z-10 overflow-hidden whitespace-nowrap border-r-2 border-white/75 animate-typewriter">
                 BUILD WITH RY
                 <Zap className="h-6 w-6 text-primary animate-zap-glow cursor-pointer" />
               </h1>
