@@ -37,9 +37,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-6 w-6 object-contain" />
-                </div>
+                <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-6 w-6 object-contain" />
                 <div>
                   <div className="font-semibold">Upwork</div>
                   <div className="text-muted-foreground">View my Upwork profile</div>
@@ -52,9 +50,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/aaf7be47-a9c5-4bf6-9986-5f137ce5cfb4.png" alt="OnlineJobs.ph" className="h-6 w-6 object-contain" />
-                </div>
+                <img src="/lovable-uploads/aaf7be47-a9c5-4bf6-9986-5f137ce5cfb4.png" alt="OnlineJobs.ph" className="h-6 w-6 object-contain" />
                 <div>
                   <div className="font-semibold">OnlineJobs.ph</div>
                   <div className="text-muted-foreground">View my OnlineJobs.ph profile</div>
@@ -67,9 +63,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/034df8e8-1c76-419e-9cc9-373df97b9259.png" alt="LinkedIn" className="h-6 w-6 object-contain" />
-                </div>
+                <img src="/lovable-uploads/034df8e8-1c76-419e-9cc9-373df97b9259.png" alt="LinkedIn" className="h-6 w-6 object-contain" />
                 <div>
                   <div className="font-semibold">LinkedIn</div>
                   <div className="text-muted-foreground">Connect with me for opportunities</div>
@@ -80,9 +74,7 @@ const Contact = () => {
                 href="mailto:adrian@buildwithry.com" 
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
-                </div>
+                <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
                 <div>
                   <div className="font-semibold">Email</div>
                   <div className="text-muted-foreground">Send me an email</div>
