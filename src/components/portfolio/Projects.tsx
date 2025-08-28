@@ -69,12 +69,19 @@ const Projects = () => {
           </p>
         </div>
         
-        {/* Moving banner */}
-        <div className="overflow-hidden mb-12">
-          <div className="animate-scroll-right whitespace-nowrap py-4">
-            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">AUTOMATION SUCCESS STORIES</span>
-            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">REAL RESULTS</span>
-            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">PROVEN SYSTEMS</span>
+        {/* Success metrics banner */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">4+</div>
+            <div className="text-muted-foreground font-medium">Automation Platforms</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">100%</div>
+            <div className="text-muted-foreground font-medium">Client Satisfaction</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-primary mb-2">80%+</div>
+            <div className="text-muted-foreground font-medium">Time Saved</div>
           </div>
         </div>
         
