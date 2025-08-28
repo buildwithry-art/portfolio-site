@@ -22,10 +22,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { href: "#about", label: "About" },
-    { href: "#work", label: "Work" },
-    { href: "#pricing", label: "Pricing" },
-    { href: "#faq", label: "FAQ" }
+    { href: "#services", label: "Services" },
+    { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Case Studies" },
+    { href: "#testimonials", label: "Testimonials" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -79,8 +79,12 @@ const Navigation = () => {
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
             
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
-              Book a Call
+            <Button 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 lightning-btn relative overflow-hidden group"
+              onClick={() => scrollToSection("#contact")}
+            >
+              <span className="relative z-10">Book a Call</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </div>
 
@@ -116,8 +120,12 @@ const Navigation = () => {
               {theme === "dark" ? 'Light Mode' : 'Dark Mode'}
             </button>
             
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full mt-4">
-              Book a Call
+            <Button 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full mt-4 lightning-btn relative overflow-hidden group"
+              onClick={() => scrollToSection("#contact")}
+            >
+              <span className="relative z-10">Book a Call</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </div>
         )}
