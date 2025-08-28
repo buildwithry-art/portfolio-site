@@ -38,7 +38,7 @@ const Contact = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-8 w-8 object-contain" />
+                  <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-6 w-6 object-contain" />
                 </div>
                 <div>
                   <div className="font-semibold">Upwork</div>
@@ -53,7 +53,7 @@ const Contact = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/aaf7be47-a9c5-4bf6-9986-5f137ce5cfb4.png" alt="OnlineJobs.ph" className="h-8 w-8 object-contain" />
+                  <img src="/lovable-uploads/aaf7be47-a9c5-4bf6-9986-5f137ce5cfb4.png" alt="OnlineJobs.ph" className="h-6 w-6 object-contain" />
                 </div>
                 <div>
                   <div className="font-semibold">OnlineJobs.ph</div>
