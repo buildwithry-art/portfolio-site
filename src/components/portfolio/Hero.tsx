@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Zap } from "lucide-react";
 import ParticleBackground from "../ParticleBackground";
-import adrianPhoto from "@/assets/adrian-photo.png";
 
 const Hero = () => {
   return (
@@ -86,7 +85,7 @@ const Hero = () => {
               {/* Photo container with glassmorphism */}
               <div className="glass rounded-3xl p-6 max-w-md">
                 <img
-                  src={adrianPhoto}
+                  src="/lovable-uploads/b747310d-2df7-4980-993c-8288fac79877.png"
                   alt="Adrian Agdan - Automation Specialist"
                   className="w-full h-auto rounded-2xl object-cover"
                 />
