@@ -115,16 +115,16 @@ export default {
 				},
 				'zap-glow': {
 					'0%, 90%, 100%': {
-						boxShadow: 'none',
-						filter: 'brightness(1)'
+						filter: 'brightness(1)',
+						color: 'hsl(var(--primary))'
 					},
 					'10%': {
-						boxShadow: '0 0 10px hsl(var(--primary))',
-						filter: 'brightness(1.5)'
+						filter: 'brightness(1.5) drop-shadow(0 0 8px #fbbf24)',
+						color: '#fbbf24'
 					},
 					'35%': {
-						boxShadow: '0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))',
-						filter: 'brightness(2)'
+						filter: 'brightness(2) drop-shadow(0 0 15px #f59e0b) drop-shadow(0 0 25px #fbbf24)',
+						color: '#f59e0b'
 					}
 				},
 				'crack-flash': {
@@ -149,6 +149,11 @@ export default {
 					from: { width: '0' },
 					to: { width: '100%' }
 				},
+				'typewriter-loop': {
+					'0%': { width: '0' },
+					'70%': { width: '100%' },
+					'100%': { width: '100%' }
+				},
 				'blinkingCursor': {
 					from: { borderRightColor: 'rgba(255,255,255,0.75)' },
 					to: { borderRightColor: 'transparent' }
@@ -160,7 +165,7 @@ export default {
 				'lightning-strike': 'lightning-strike 4s ease-in-out infinite',
 				'zap-glow': 'zap-glow 4s ease-in-out infinite',
 				'crack-flash': 'crack-flash 4s ease-in-out infinite',
-				'typewriter': 'typewriter 5s steps(50) 1s 1 normal both, blinkingCursor 500ms steps(50) infinite normal',
+				'typewriter': 'typewriter-loop 4s steps(50) infinite, blinkingCursor 500ms steps(50) infinite normal',
 				'blinking-cursor': 'blinkingCursor 500ms steps(50) infinite normal'
 			}
 		}
