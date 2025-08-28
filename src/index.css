@@ -222,26 +222,27 @@ All colors MUST be HSL.
   
   .animate-float {
     animation: float 3s ease-in-out infinite;
-}
-
-/* Sparking Zap Icon Animation */
-.zap-spark {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.zap-spark:hover {
-  color: #fbbf24; /* yellow-400 */
-  filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 16px #f59e0b);
-  transform: scale(1.1);
-  animation: spark 0.6s ease-in-out;
-}
-
-@keyframes spark {
-  0%, 100% { 
-    filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 16px #f59e0b); 
   }
-  50% { 
-    filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 24px #f59e0b) drop-shadow(0 0 32px #fbbf24); 
-    transform: scale(1.15);
+  
+  /* Sparking Zap Icon Animation */
+  .zap-spark {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .zap-spark:hover {
+    color: #fbbf24; /* yellow-400 */
+    filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 16px #f59e0b);
+    transform: scale(1.1);
+    animation: spark 0.6s ease-in-out;
+  }
+
+  @keyframes spark {
+    0%, 100% { 
+      filter: drop-shadow(0 0 8px #fbbf24) drop-shadow(0 0 16px #f59e0b); 
+    }
+    50% { 
+      filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 24px #f59e0b) drop-shadow(0 0 32px #fbbf24); 
+      transform: scale(1.15);
+    }
   }
 }
