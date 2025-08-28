@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MessageSquare, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -31,35 +31,63 @@ const Contact = () => {
             </div>
             
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
+              <a 
+                href="https://www.upwork.com/freelancers/~018dab48b65b2c0233" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+              >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-8 w-8 object-contain" />
                 </div>
                 <div>
-                  <div className="font-semibold">Email</div>
+                  <div className="font-semibold">Upwork</div>
+                  <div className="text-muted-foreground">View my Upwork profile</div>
+                </div>
+              </a>
+              
+              <a 
+                href="mailto:adrian@buildwithry.com" 
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
+                </div>
+                <div>
+                  <div className="font-semibold">Gmail</div>
                   <div className="text-muted-foreground">adrian@buildwithry.com</div>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center gap-4">
+              <a 
+                href="https://www.linkedin.com/in/adrianryan-/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+              >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <MessageSquare className="h-6 w-6 text-primary" />
+                  <img src="/lovable-uploads/034df8e8-1c76-419e-9cc9-373df97b9259.png" alt="LinkedIn" className="h-6 w-6 object-contain" />
                 </div>
                 <div>
                   <div className="font-semibold">LinkedIn</div>
                   <div className="text-muted-foreground">Connect with me for opportunities</div>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center gap-4">
+              <a 
+                href="https://www.onlinejobs.ph/jobseekers/info/1611430" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+              >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <div className="font-semibold">Phone</div>
-                  <div className="text-muted-foreground">Available for consultation calls</div>
+                  <div className="font-semibold">OnlineJobs.ph</div>
+                  <div className="text-muted-foreground">View my OnlineJobs.ph profile</div>
                 </div>
-              </div>
+              </a>
               
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
