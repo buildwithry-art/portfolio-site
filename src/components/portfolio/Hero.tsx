@@ -74,7 +74,7 @@ const Hero = () => {
                 />
                 
                 {/* AHA moment thinking icon */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
+                <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
                   <div className="bg-blue-500 rounded-full p-2 shadow-lg animate-bounce">
                     <Lightbulb className="w-6 h-6 text-white" />
                   </div>
