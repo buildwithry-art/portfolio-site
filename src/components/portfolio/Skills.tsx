@@ -28,17 +28,57 @@ const skillCategories = [
   }
 ];
 
+const toolLogos = [
+  { name: "Make", logo: "🔧", color: "text-purple-500" },
+  { name: "Zapier", logo: "⚡", color: "text-orange-500" },
+  { name: "GoHighLevel", logo: "🚀", color: "text-blue-500" },
+  { name: "n8n", logo: "🔗", color: "text-red-500" },
+  { name: "Supabase", logo: "⚡", color: "text-green-500" },
+  { name: "Airtable", logo: "📊", color: "text-yellow-500" },
+  { name: "Shopify", logo: "🛒", color: "text-green-600" },
+  { name: "Stripe", logo: "💳", color: "text-purple-600" },
+  { name: "Twilio", logo: "📱", color: "text-red-600" },
+  { name: "Canva", logo: "🎨", color: "text-cyan-500" },
+  { name: "Slack", logo: "💬", color: "text-purple-400" },
+  { name: "Asana", logo: "✅", color: "text-pink-500" }
+];
+
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
-            Technical Skills
+            Skills and Tools
           </h2>
           <p className="text-xl text-muted-foreground">
             Tools and platforms I use to deliver exceptional automation solutions
           </p>
+        </div>
+
+        {/* Animated Tools Logos */}
+        <div className="mb-16">
+          <div className="relative overflow-hidden py-8">
+            <div className="flex animate-scroll-right space-x-8 w-max">
+              {[...toolLogos, ...toolLogos].map((tool, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 group cursor-pointer"
+                >
+                  <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg smooth-animation hover:scale-110 glass">
+                    <div className="text-center">
+                      <div className={`text-4xl mb-2 ${tool.color} group-hover:scale-125 smooth-animation`}>
+                        {tool.logo}
+                      </div>
+                      <span className="text-sm font-medium text-foreground group-hover:text-primary smooth-animation">
+                        {tool.name}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
