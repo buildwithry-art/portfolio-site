@@ -58,66 +58,93 @@ const projects = [{
   detailedWorkflow: ["Appointment status trigger activates workflow", "Conditional logic checks if tags include no show", "Branch A: Lost tag added for no-shows", "Branch B: Opportunity created for attended appointments", "Opportunity status updated automatically", "Follow-up sequences triggered based on outcome", "Date formatting applied for tracking", "Workflow ends with appropriate next actions"]
 }];
 const Projects = () => {
-  return <section id="projects" className="py-20 px-4 bg-muted/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
+  return (
+    <section id="projects" className="py-20 px-4 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary))_0%,transparent_50%)] opacity-5"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent))_0%,transparent_50%)] opacity-5"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header with improved layout */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gradient">
             Case Studies
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Real automation solutions that transformed businesses
           </p>
+          
+          {/* Success metrics - horizontal layout */}
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-12 pt-8 border-t border-border/30">
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-2">4+</div>
+              <div className="text-muted-foreground font-medium text-sm md:text-base">Automation Platforms</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-2">100%</div>
+              <div className="text-muted-foreground font-medium text-sm md:text-base">Client Satisfaction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-2">80%+</div>
+              <div className="text-muted-foreground font-medium text-sm md:text-base">Time Saved</div>
+            </div>
+          </div>
         </div>
         
-        {/* Success metrics banner */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">4+</div>
-            <div className="text-muted-foreground font-medium">Automation Platforms</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">100%</div>
-            <div className="text-muted-foreground font-medium">Client Satisfaction</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">80%+</div>
-            <div className="text-muted-foreground font-medium">Time Saved</div>
-          </div>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Project cards - alternating layout */}
+        <div className="space-y-16">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover-lift bg-background/80 backdrop-blur-sm border border-border/50">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={project.automationImage} 
-                  alt={`${project.title} workflow diagram`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 left-4">
-                  <Badge variant="secondary" className="bg-background/90 text-foreground">
-                    {project.platform}
-                  </Badge>
+            <div 
+              key={index} 
+              className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+              }`}
+            >
+              {/* Image section */}
+              <div className={`relative group ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                  <img 
+                    src={project.automationImage} 
+                    alt={`${project.title} workflow diagram`}
+                    className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  <div className="absolute top-6 left-6">
+                    <Badge variant="secondary" className="bg-background/95 text-foreground backdrop-blur-sm">
+                      {project.platform}
+                    </Badge>
+                  </div>
+                  <div className="absolute bottom-6 right-6">
+                    <Badge variant="outline" className="bg-background/95 backdrop-blur-sm">
+                      {project.category}
+                    </Badge>
+                  </div>
                 </div>
               </div>
               
-              <CardHeader>
-                <div className="flex justify-between items-start mb-2">
-                  <Badge variant="outline" className="mb-2">{project.category}</Badge>
+              {/* Content section */}
+              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                <div>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
-                <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  {project.description}
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent>
+                
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-sm mb-2">Technologies Used</h4>
+                    <h4 className="font-semibold text-base mb-3 text-foreground/90">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                        <Badge 
+                          key={techIndex} 
+                          variant="secondary" 
+                          className="text-sm px-3 py-1 bg-muted/60 hover:bg-muted transition-colors"
+                        >
                           {tech}
                         </Badge>
                       ))}
@@ -125,12 +152,12 @@ const Projects = () => {
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold text-sm mb-2">Key Results</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      {project.features.slice(0, 2).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <span className="text-primary mr-2">•</span>
-                          {feature}
+                    <h4 className="font-semibold text-base mb-3 text-foreground/90">Key Results</h4>
+                    <ul className="space-y-2">
+                      {project.features.slice(0, 3).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start text-muted-foreground">
+                          <span className="text-primary mr-3 text-lg">•</span>
+                          <span className="leading-relaxed">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -138,9 +165,9 @@ const Projects = () => {
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" className="w-full mt-4">
-                        <Eye className="w-4 h-4 mr-2" />
-                        View Details
+                      <Button variant="outline" size="lg" className="mt-6 group">
+                        <Eye className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                        View Full Case Study
                       </Button>
                     </DialogTrigger>
                     <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
@@ -203,12 +230,13 @@ const Projects = () => {
                     </DialogContent>
                   </Dialog>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
-        
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Projects;
