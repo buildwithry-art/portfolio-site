@@ -65,14 +65,14 @@ const Skills = () => {
                   key={index}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="bg-white rounded-xl p-6 hover:shadow-lg smooth-animation hover:scale-110 border border-gray-200/20">
+                  <div className="transparent rounded-xl p-6 hover:shadow-lg smooth-animation hover:scale-110 border border-gray-200/20">
                     <div className="flex items-center justify-center">
-                      <div className="h-16 w-16 group-hover:scale-125 smooth-animation flex items-center justify-center bg-white rounded-lg">
+                      <div className="h-16 w-16 group-hover:scale-125 smooth-animation flex items-center justify-center transparent rounded-lg">
                         {tool.isImage ? (
                           <img 
                             src={tool.logo} 
                             alt={tool.name} 
-                            className="h-12 w-12 object-contain bg-white rounded"
+                            className="h-12 w-12 object-contain transparent rounded"
                           />
                         ) : (
                           <div className={`text-4xl ${tool.color}`}>
