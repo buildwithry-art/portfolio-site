@@ -16,7 +16,7 @@ const Hero = () => {
                 <span className="text-gradient block">
                   automate workflows
                 </span>
-                and scale without extra staff
+                and scale effortlessly
               </h1>
               
               <p className="font-colfax text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
