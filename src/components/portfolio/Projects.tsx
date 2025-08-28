@@ -104,89 +104,24 @@ const Projects = () => {
             >
               {/* Image section */}
               <div className={`relative group ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 cursor-pointer">
-                      <img 
-                        src={project.automationImage} 
-                        alt={`${project.title} workflow diagram`}
-                        className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Eye className="w-12 h-12 text-white" />
-                      </div>
-                      <div className="absolute top-6 left-6">
-                        <Badge variant="secondary" className="bg-background/95 text-foreground backdrop-blur-sm">
-                          {project.platform}
-                        </Badge>
-                      </div>
-                      <div className="absolute bottom-6 right-6">
-                        <Badge variant="outline" className="bg-background/95 backdrop-blur-sm">
-                          {project.category}
-                        </Badge>
-                      </div>
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl">{project.title}</DialogTitle>
-                      <DialogDescription className="text-base">
-                        {project.client} - {project.category}
-                      </DialogDescription>
-                    </DialogHeader>
-                    
-                    <div className="grid md:grid-cols-2 gap-6 mt-6">
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-bold text-lg mb-2">Challenge</h4>
-                          <p className="text-muted-foreground">{project.problem}</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-bold text-lg mb-2">Solution</h4>
-                          <p className="text-muted-foreground">{project.solution}</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-bold text-lg mb-2">Results Achieved</h4>
-                          <ul className="space-y-2">
-                            {project.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-start text-sm">
-                                <span className="text-primary mr-2">✓</span>
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-bold text-lg mb-2">Workflow Process</h4>
-                          <ol className="space-y-2">
-                            {project.detailedWorkflow.map((step, stepIndex) => (
-                              <li key={stepIndex} className="flex items-start text-sm">
-                                <span className="bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs mr-3 mt-0.5 flex-shrink-0">
-                                  {stepIndex + 1}
-                                </span>
-                                {step}
-                              </li>
-                            ))}
-                          </ol>
-                        </div>
-                        
-                        <div className="bg-muted/30 p-4 rounded-lg">
-                          <img 
-                            src={project.automationImage} 
-                            alt={`${project.title} workflow diagram`}
-                            className="w-full rounded-md"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                  <img 
+                    src={project.automationImage} 
+                    alt={`${project.title} workflow diagram`}
+                    className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  <div className="absolute top-6 left-6">
+                    <Badge variant="secondary" className="bg-background/95 text-foreground backdrop-blur-sm">
+                      {project.platform}
+                    </Badge>
+                  </div>
+                  <div className="absolute bottom-6 right-6">
+                    <Badge variant="outline" className="bg-background/95 backdrop-blur-sm">
+                      {project.category}
+                    </Badge>
+                  </div>
+                </div>
               </div>
               
               {/* Content section */}
