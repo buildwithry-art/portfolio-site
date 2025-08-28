@@ -70,7 +70,7 @@ const Hero = () => {
                 <img 
                   src={adrianPhoto}
                   alt="Adrian - Automation Specialist" 
-                  className="w-80 h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="w-96 h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>

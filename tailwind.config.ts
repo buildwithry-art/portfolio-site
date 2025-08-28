@@ -125,13 +125,32 @@ export default {
 						boxShadow: '0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))',
 						filter: 'brightness(2)'
 					}
+				},
+				'crack-flash': {
+					'0%, 90%, 100%': {
+						opacity: '0',
+						transform: 'scale(0)'
+					},
+					'10%': {
+						opacity: '0.3',
+						transform: 'scale(1)'
+					},
+					'35%': {
+						opacity: '0.6',
+						transform: 'scale(1.2)'
+					},
+					'40%': {
+						opacity: '0',
+						transform: 'scale(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'lightning-strike': 'lightning-strike 4s ease-in-out infinite',
-				'zap-glow': 'zap-glow 4s ease-in-out infinite'
+				'zap-glow': 'zap-glow 4s ease-in-out infinite',
+				'crack-flash': 'crack-flash 4s ease-in-out infinite'
 			}
 		}
 	},

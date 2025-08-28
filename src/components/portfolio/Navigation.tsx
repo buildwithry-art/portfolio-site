@@ -52,10 +52,19 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <h1 className="font-futuristic text-xl font-bold text-foreground flex items-center gap-2 tracking-wider animate-lightning-strike">
-              BUILD WITH RY
-              <Zap className="h-6 w-6 text-primary animate-zap-glow cursor-pointer" />
-            </h1>
+            <div className="relative">
+              <h1 className="font-futuristic text-xl font-bold text-foreground flex items-center gap-2 tracking-wider animate-lightning-strike relative z-10">
+                BUILD WITH RY
+                <Zap className="h-6 w-6 text-primary animate-zap-glow cursor-pointer" />
+              </h1>
+              {/* Crack effects */}
+              <div className="absolute inset-0 pointer-events-none animate-crack-flash">
+                <div className="absolute top-1/2 left-1/4 w-px h-3 bg-primary/60 rotate-45 transform -translate-y-1/2"></div>
+                <div className="absolute top-1/3 right-1/4 w-px h-4 bg-primary/40 -rotate-12 transform"></div>
+                <div className="absolute bottom-1/3 left-1/3 w-px h-2 bg-primary/50 rotate-75 transform"></div>
+                <div className="absolute top-2/3 right-1/3 w-px h-3 bg-primary/30 -rotate-45 transform"></div>
+              </div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
