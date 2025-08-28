@@ -5,52 +5,49 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "AI-Powered Proposal Generator",
-    description: "Automated proposal creation system using n8n, Google Slides, and OpenAI integration. Generates client-ready proposals in minutes with custom branding and content.",
-    technologies: ["n8n", "OpenAI", "Google Slides API", "Automation"],
+    title: "Automating Lead Capture & Follow-Up",
+    description: "Digital Marketing Agency: Automated Facebook Lead Ads integration with GoHighLevel CRM, eliminating manual data entry and improving response times.",
+    technologies: ["GoHighLevel", "Zapier", "Facebook Lead Ads", "SMS/Email"],
     features: [
-      "AI content generation based on client requirements",
-      "Automatic branding and template application",
-      "Client data integration from CRM",
-      "70% reduction in proposal creation time"
+      "100% of leads captured automatically",
+      "Response time reduced from 6 hours to under 1 minute",
+      "Lead-to-call booking rate increased by 35%",
+      "Automated follow-up SMS/email sequences"
     ],
-    category: "Workflow Automation"
+    category: "Lead Generation",
+    client: "Digital Marketing Agency",
+    problem: "Leads from Facebook Ads were being manually entered into CRM, causing delays and missed opportunities.",
+    solution: "Integrated Facebook Lead Ads → Zapier → GoHighLevel CRM with automated follow-up sequences and pipeline tracking."
   },
   {
-    title: "Lead Management Automation Hub",
-    description: "Complete lead management system using Make.com with Google Sheets, Gmail, and Calendar integration for seamless client follow-ups.",
-    technologies: ["Make.com", "Google Sheets", "Gmail API", "Calendar Integration"],
+    title: "E-commerce Order Management System",
+    description: "Online Store: Built comprehensive order tracking system connecting Shopify with Google Sheets and Slack for real-time inventory management.",
+    technologies: ["Shopify", "Make", "Google Sheets", "Slack"],
     features: [
-      "Automated lead scoring and qualification",
-      "Multi-channel follow-up sequences",
-      "Real-time CRM updates",
-      "Performance tracking and analytics"
+      "Saved 10+ hours/week in manual work",
+      "Inventory errors reduced to zero",
+      "Real-time sales performance visibility",
+      "Automated low-stock alerts"
     ],
-    category: "Lead Generation"
+    category: "E-commerce",
+    client: "Online Store Owner",
+    problem: "Orders were being tracked manually, making it difficult to manage inventory and reporting.",
+    solution: "Built Make scenario: Shopify → Google Sheets → Slack with daily sales updates and inventory alerts."
   },
   {
-    title: "E-commerce Automation Suite",
-    description: "Comprehensive automation system for cookware company including abandoned cart recovery, inventory management, and customer communication.",
-    technologies: ["GoHighLevel", "Shopify", "Email Marketing", "CRM"],
+    title: "Multi-Platform SaaS Workflow",
+    description: "SaaS Startup: Streamlined customer onboarding by connecting payments, team notifications, and documentation across multiple platforms.",
+    technologies: ["n8n", "Slack", "Notion", "Stripe"],
     features: [
-      "Abandoned cart email sequences",
-      "Inventory level monitoring",
-      "Customer support ticket automation",
-      "Mobile-responsive email templates"
+      "Onboarding process went from 30 minutes manual → 100% automated",
+      "Customer experience improved with instant onboarding emails",
+      "Scaled to handle 5x more customers without extra staff",
+      "Automated documentation creation"
     ],
-    category: "E-commerce"
-  },
-  {
-    title: "LinkedIn Lead Generation System",
-    description: "Automated LinkedIn outreach campaigns with personalized messaging and connection tracking for B2B lead generation.",
-    technologies: ["LinkedIn Sales Navigator", "CRM Integration", "Email Automation"],
-    features: [
-      "Personalized connection requests",
-      "Follow-up message sequences",
-      "Lead qualification scoring",
-      "CRM automatic data sync"
-    ],
-    category: "Lead Generation"
+    category: "SaaS Automation",
+    client: "SaaS Founder",
+    problem: "Customer onboarding was messy—payments, team notifications, and documentation were handled separately.",
+    solution: "Built n8n workflow: Stripe payment → Notion database → Slack channel → Welcome email automation."
   }
 ];
 
@@ -60,49 +57,76 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
-            Featured Projects
+            ⚡ Case Studies
           </h2>
           <p className="text-xl text-muted-foreground">
-            Automation solutions that deliver real business impact
+            Real automation solutions that transformed businesses
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Moving banner with lightning effect */}
+        <div className="overflow-hidden mb-12">
+          <div className="animate-scroll-right whitespace-nowrap py-4">
+            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">⚡ AUTOMATION SUCCESS STORIES</span>
+            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">⚡ REAL RESULTS</span>
+            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">⚡ PROVEN SYSTEMS</span>
+          </div>
+        </div>
+        
+        <div className="space-y-8">
           {projects.map((project, index) => (
-            <Card key={index} className="glass hover:scale-[1.02] smooth-animation group">
+            <Card key={index} className="glass hover:scale-[1.01] smooth-animation group cursor-pointer transform hover:shadow-2xl">
               <CardHeader>
-                <div className="flex justify-between items-start gap-4">
-                  <div>
-                    <Badge variant="outline" className="mb-2">
-                      {project.category}
-                    </Badge>
-                    <CardTitle className="text-xl group-hover:text-primary smooth-animation">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl">⚡</span>
+                      <Badge variant="outline" className="mb-0">
+                        {project.category}
+                      </Badge>
+                    </div>
+                    <CardTitle className="text-2xl md:text-3xl group-hover:text-primary smooth-animation mb-2">
                       {project.title}
                     </CardTitle>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      <strong>Client:</strong> {project.client}
+                    </p>
                   </div>
                 </div>
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {project.description}
-                </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-sm mb-2 text-foreground">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {project.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2 text-destructive">❌ Problem:</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.problem}
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2 text-green-500">✅ Solution:</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {project.solution}
+                    </p>
+                  </div>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-sm mb-2 text-foreground">Technologies:</h4>
+                  <h4 className="font-semibold text-sm mb-3 text-primary">🎯 Results:</h4>
+                  <div className="grid sm:grid-cols-2 gap-2">
+                    {project.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-sm text-muted-foreground p-2 rounded-md hover:bg-muted/50 smooth-animation">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-sm mb-2 text-foreground">🛠️ Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, idx) => (
-                      <Badge key={idx} variant="secondary" className="text-xs">
+                      <Badge key={idx} variant="secondary" className="text-xs hover:bg-primary hover:text-primary-foreground smooth-animation">
                         {tech}
                       </Badge>
                     ))}
@@ -110,9 +134,9 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-2 pt-2">
-                  <Button variant="outline" size="sm" className="glass">
+                  <Button variant="outline" size="sm" className="glass group-hover:border-primary smooth-animation">
                     <ExternalLink className="h-4 w-4" />
-                    View Details
+                    View Full Case Study
                   </Button>
                 </div>
               </CardContent>
