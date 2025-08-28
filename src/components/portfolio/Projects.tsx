@@ -104,24 +104,43 @@ const Projects = () => {
             >
               {/* Image section */}
               <div className={`relative group ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                  <img 
-                    src={project.automationImage} 
-                    alt={`${project.title} workflow diagram`}
-                    className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                  <div className="absolute top-6 left-6">
-                    <Badge variant="secondary" className="bg-background/95 text-foreground backdrop-blur-sm">
-                      {project.platform}
-                    </Badge>
-                  </div>
-                  <div className="absolute bottom-6 right-6">
-                    <Badge variant="outline" className="bg-background/95 backdrop-blur-sm">
-                      {project.category}
-                    </Badge>
-                  </div>
-                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 cursor-pointer">
+                      <img 
+                        src={project.automationImage} 
+                        alt={`${project.title} workflow diagram`}
+                        className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                        <Eye className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                      <div className="absolute top-6 left-6">
+                        <Badge variant="secondary" className="bg-background/95 text-foreground backdrop-blur-sm">
+                          {project.platform}
+                        </Badge>
+                      </div>
+                      <div className="absolute bottom-6 right-6">
+                        <Badge variant="outline" className="bg-background/95 backdrop-blur-sm">
+                          {project.category}
+                        </Badge>
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-5xl max-h-[90vh] overflow-hidden p-2">
+                    <DialogHeader className="p-4">
+                      <DialogTitle className="text-xl">{project.title} - Workflow Diagram</DialogTitle>
+                    </DialogHeader>
+                    <div className="relative bg-muted/20 rounded-lg overflow-hidden">
+                      <img 
+                        src={project.automationImage} 
+                        alt={`${project.title} full workflow diagram`}
+                        className="w-full max-h-[70vh] object-contain"
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
               
               {/* Content section */}
