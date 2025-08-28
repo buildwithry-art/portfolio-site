@@ -3,11 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin } from "lucide-react";
-
+import { Mail, MessageSquare, Phone, MapPin } from "lucide-react";
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 px-4 bg-muted/50">
+  return <section id="contact" className="py-20 px-4 bg-muted/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
@@ -31,63 +29,35 @@ const Contact = () => {
             </div>
             
             <div className="space-y-6">
-              <a 
-                href="https://www.upwork.com/freelancers/~018dab48b65b2c0233" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
-              >
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-8 w-8 object-contain" />
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <div className="font-semibold">Upwork</div>
-                  <div className="text-muted-foreground">View my Upwork profile</div>
-                </div>
-              </a>
-              
-              <a 
-                href="mailto:adrian@buildwithry.com" 
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
-                </div>
-                <div>
-                  <div className="font-semibold">Gmail</div>
+                  <div className="font-semibold">Email</div>
                   <div className="text-muted-foreground">adrian@buildwithry.com</div>
                 </div>
-              </a>
+              </div>
               
-              <a 
-                href="https://www.linkedin.com/in/adrianryan-/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
-              >
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/034df8e8-1c76-419e-9cc9-373df97b9259.png" alt="LinkedIn" className="h-6 w-6 object-contain" />
+                  <MessageSquare className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <div className="font-semibold">LinkedIn</div>
                   <div className="text-muted-foreground">Connect with me for opportunities</div>
                 </div>
-              </a>
+              </div>
               
-              <a 
-                href="https://www.onlinejobs.ph/jobseekers/info/1611430" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
-              >
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <div className="font-semibold">OnlineJobs.ph</div>
-                  <div className="text-muted-foreground">View my OnlineJobs.ph profile</div>
+                  <div className="font-semibold">Phone</div>
+                  <div className="text-muted-foreground">Available for consultation calls</div>
                 </div>
-              </a>
+              </div>
               
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -122,8 +92,8 @@ const Contact = () => {
               </div>
               
               <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="john@example.com" className="mt-1" />
+                
+                
               </div>
               
               <div>
@@ -138,11 +108,7 @@ const Contact = () => {
               
               <div>
                 <Label htmlFor="message">Message</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Tell me about your automation needs, current challenges, and goals..."
-                  className="mt-1 min-h-[120px]"
-                />
+                <Textarea id="message" placeholder="Tell me about your automation needs, current challenges, and goals..." className="mt-1 min-h-[120px]" />
               </div>
               
               <Button variant="gradient" size="lg" className="w-full">
@@ -152,8 +118,6 @@ const Contact = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
