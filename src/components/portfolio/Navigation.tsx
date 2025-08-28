@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Zap, Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +34,14 @@ const Navigation = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsOpen(false);
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  if (!mounted) {
+    return null;
   };
 
   return (
@@ -58,10 +72,11 @@ const Navigation = () => {
             
             {/* Dark Mode Toggle */}
             <button
-              onClick={() => setIsDark(!isDark)}
+              onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-muted transition-colors"
+              aria-label="Toggle theme"
             >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
             
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
@@ -93,11 +108,12 @@ const Navigation = () => {
             
             {/* Mobile Dark Mode Toggle */}
             <button
-              onClick={() => setIsDark(!isDark)}
+              onClick={toggleTheme}
               className="flex items-center gap-2 w-full text-left font-colfax text-muted-foreground hover:text-primary smooth-animation font-medium py-2"
+              aria-label="Toggle theme"
             >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              {isDark ? 'Light Mode' : 'Dark Mode'}
+              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {theme === "dark" ? 'Light Mode' : 'Dark Mode'}
             </button>
             
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full mt-4">
