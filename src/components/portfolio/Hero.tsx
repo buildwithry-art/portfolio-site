@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 import automationIcon from "@/assets/automation-icon.png";
-import adrianPhoto from "@/assets/adrian-photo.png";
+import adrianPhoto from "/lovable-uploads/892fb2d8-1fb5-4b9c-9831-7db3e194f5e9.png";
 
 const Hero = () => {
   return (
@@ -61,34 +61,17 @@ const Hero = () => {
           
           {/* Visual */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
+            <div className="relative group cursor-pointer">
               {/* Background decoration */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
               
               {/* Main photo container */}
-              <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl shadow-strong group-hover:shadow-xl transition-all duration-300 hover-lift">
                 <img 
                   src={adrianPhoto}
                   alt="Adrian - Automation Specialist" 
-                  className="w-80 h-80 object-cover rounded-3xl shadow-strong hover-glow"
+                  className="w-80 h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                
-                {/* Automation icon overlay */}
-                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-strong animate-float">
-                  <img 
-                    src={automationIcon}
-                    alt="Automation workflows" 
-                    className="w-16 h-16 object-contain"
-                  />
-                </div>
-              </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-medium animate-bounce">
-                24/7 Automation
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-medium" style={{animationDelay: '1s'}}>
-                Seamless Integration
               </div>
             </div>
           </div>
