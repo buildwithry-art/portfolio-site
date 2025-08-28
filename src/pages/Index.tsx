@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/portfolio/Navigation";
+import Hero from "@/components/portfolio/Hero";
+import Services from "@/components/portfolio/Services";
+import Experience from "@/components/portfolio/Experience";
+import Skills from "@/components/portfolio/Skills";
+import Projects from "@/components/portfolio/Projects";
+import Testimonials from "@/components/portfolio/Testimonials";
+import Contact from "@/components/portfolio/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <Services />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Testimonials />
+      <Contact />
+      
+      {/* Footer */}
+      <footer className="py-8 px-4 border-t border-border/50">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-muted-foreground">
+            © 2025 Build with RY. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
