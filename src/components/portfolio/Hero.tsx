@@ -11,7 +11,7 @@ const Hero = () => {
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="mb-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="font-ubuntu text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 I help businesses 
                 <span className="text-gradient block">
                   automate workflows
@@ -19,7 +19,7 @@ const Hero = () => {
                 and scale without extra staff
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <p className="font-colfax text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Specialist in <span className="font-semibold text-primary">GoHighLevel</span>, <span className="font-semibold text-primary">Zapier</span>, <span className="font-semibold text-primary">Make</span>, and <span className="font-semibold text-primary">n8n</span> — turning manual tasks into seamless, revenue-driving systems.
               </p>
             </div>

@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'ubuntu': ['Ubuntu', 'sans-serif'],
+				'colfax': ['Inter', 'sans-serif'], // Using Inter as Colfax alternative
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
