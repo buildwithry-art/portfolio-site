@@ -67,12 +67,12 @@ const Skills = () => {
                 >
                   <div className="transparent rounded-xl p-6 hover:shadow-lg smooth-animation hover:scale-110 border border-gray-200/20">
                     <div className="flex items-center justify-center">
-                      <div className="h-16 w-16 group-hover:scale-125 smooth-animation flex items-center justify-center transparent rounded-lg">
+                      <div className="h-20 w-20 group-hover:scale-125 smooth-animation flex items-center justify-center transparent rounded-lg">
                         {tool.isImage ? (
                           <img 
                             src={tool.logo} 
                             alt={tool.name} 
-                            className="h-12 w-12 object-contain transparent rounded"
+                            className="h-16 w-16 object-contain transparent rounded"
                             style={
                               ['Shopify', 'Stripe', 'Slack', 'Asana', 'GoHighLevel'].includes(tool.name)
                                 ? { 
