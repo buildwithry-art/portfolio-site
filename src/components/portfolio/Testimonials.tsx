@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Quote } from "lucide-react";
+import { useState } from "react";
 
 const testimonials = [
   {
@@ -38,8 +39,13 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const [selectedTestimonial, setSelectedTestimonial] = useState<number | null>(null);
+  
+  // Double the testimonials for seamless loop
+  const doubledTestimonials = [...testimonials, ...testimonials];
+
   return (
-    <section id="testimonials" className="py-20 px-4">
+    <section id="testimonials" className="py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
@@ -50,43 +56,77 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="glass hover:scale-[1.02] smooth-animation relative">
-              <CardContent className="p-6">
-                <Quote className="h-8 w-8 text-primary/20 mb-4" />
-                <blockquote className="text-muted-foreground leading-relaxed mb-6">
-                  "{testimonial.content}"
-                </blockquote>
-                
-                <div className="flex items-center gap-4">
-                  <Avatar className="h-12 w-12">
-                    <AvatarImage src="" alt={testimonial.name} />
-                    <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                      {testimonial.avatar}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-sm text-primary">{testimonial.company}</div>
+        <div 
+          className="relative overflow-hidden"
+          onMouseEnter={(e) => {
+            const slider = e.currentTarget.querySelector('.testimonials-slider') as HTMLElement;
+            if (slider && selectedTestimonial === null) {
+              slider.style.animationPlayState = 'paused';
+            }
+          }}
+          onMouseLeave={(e) => {
+            const slider = e.currentTarget.querySelector('.testimonials-slider') as HTMLElement;
+            if (slider && selectedTestimonial === null) {
+              slider.style.animationPlayState = 'running';
+            }
+          }}
+        >
+          <div className="testimonials-slider flex gap-8 animate-scroll-right">
+            {doubledTestimonials.map((testimonial, index) => (
+              <Card 
+                key={index} 
+                className={`glass min-w-[400px] max-w-[400px] cursor-pointer transition-all duration-500 ${
+                  selectedTestimonial === index 
+                    ? 'scale-110 z-10 shadow-2xl' 
+                    : 'hover:scale-[1.02]'
+                }`}
+                onClick={() => {
+                  if (selectedTestimonial === index) {
+                    setSelectedTestimonial(null);
+                    const slider = document.querySelector('.testimonials-slider') as HTMLElement;
+                    if (slider) slider.style.animationPlayState = 'running';
+                  } else {
+                    setSelectedTestimonial(index);
+                    const slider = document.querySelector('.testimonials-slider') as HTMLElement;
+                    if (slider) slider.style.animationPlayState = 'paused';
+                  }
+                }}
+              >
+                <CardContent className="p-6 h-full flex flex-col">
+                  <Quote className="h-8 w-8 text-primary/20 mb-4 flex-shrink-0" />
+                  <blockquote className="text-muted-foreground leading-relaxed mb-6 flex-grow text-sm">
+                    "{testimonial.content}"
+                  </blockquote>
+                  
+                  <div className="flex items-center gap-4 mt-auto">
+                    <Avatar className="h-12 w-12 flex-shrink-0">
+                      <AvatarImage src="" alt={testimonial.name} />
+                      <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+                        {testimonial.avatar}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-semibold text-foreground truncate">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground truncate">{testimonial.role}</div>
+                      <div className="text-sm text-primary truncate">{testimonial.company}</div>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex mt-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  
+                  <div className="flex mt-4 flex-shrink-0">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>
