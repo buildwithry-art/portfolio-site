@@ -49,7 +49,7 @@ npm run dev
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
-
+    
 ## What technologies are used for this project?
 
 This project is built with:
@@ -69,5 +69,5 @@ Simply open [Lovable](https://lovable.dev/projects/b7d366ae-0636-429a-b3fd-0b63e
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
+  
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
