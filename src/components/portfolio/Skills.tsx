@@ -76,8 +76,8 @@ const Skills = () => {
                             style={
                               ['Shopify', 'Stripe', 'Slack', 'Asana', 'GoHighLevel'].includes(tool.name)
                                 ? { 
-                                    filter: 'contrast(200%) brightness(1.2) saturate(1.5)',
-                                    mixBlendMode: 'darken',
+                                    filter: 'contrast(110%) brightness(1.1)',
+                                    mixBlendMode: 'multiply',
                                     backgroundColor: 'transparent'
                                   }
                                 : {}
