@@ -65,14 +65,14 @@ const Skills = () => {
                   key={index}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg smooth-animation hover:scale-110 glass">
-                    <div className="text-center">
-                      <div className="h-16 w-16 mx-auto mb-2 group-hover:scale-125 smooth-animation flex items-center justify-center">
+                  <div className="bg-white rounded-xl p-6 hover:shadow-lg smooth-animation hover:scale-110 border border-gray-200/20">
+                    <div className="flex items-center justify-center">
+                      <div className="h-16 w-16 group-hover:scale-125 smooth-animation flex items-center justify-center">
                         {tool.isImage ? (
                           <img 
                             src={tool.logo} 
                             alt={tool.name} 
-                            className="h-full w-full object-contain rounded-lg"
+                            className="h-full w-full object-contain"
                             style={{ 
                               imageRendering: 'crisp-edges',
                               background: 'transparent'
@@ -84,9 +84,6 @@ const Skills = () => {
                           </div>
                         )}
                       </div>
-                      <span className="text-sm font-medium text-foreground group-hover:text-primary smooth-animation">
-                        {tool.name}
-                      </span>
                     </div>
                   </div>
                 </div>
