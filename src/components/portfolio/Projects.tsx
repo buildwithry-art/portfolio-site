@@ -4,67 +4,202 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ExternalLink, Github, Zap, Eye } from "lucide-react";
 import { useState } from "react";
-import ghlAutomation from "@/assets/ghl-automation.jpg";
-import makeAutomation from "@/assets/make-automation.jpg";
-import n8nAutomation from "@/assets/n8n-automation.jpg";
+import zapierCaseStudy from "/lovable-uploads/2f07a1c7-8827-4169-9c4d-6353aa824503.png";
+import makeCaseStudy from "/lovable-uploads/833c006f-8a7a-4522-8686-83e73cd9afa2.png";
+import n8nCaseStudy from "/lovable-uploads/7d1106cf-f77a-469f-9c81-5dbbcf6626a8.png";
+import ghlCaseStudy from "/lovable-uploads/0382c638-b3db-4b63-806e-a772fbaeb008.png";
 const projects = [{
-  title: "Automating Lead Capture & Follow-Up",
-  description: "Digital Marketing Agency: Automated Facebook Lead Ads integration with GoHighLevel CRM, eliminating manual data entry and improving response times.",
-  technologies: ["GoHighLevel", "Zapier", "Facebook Lead Ads", "SMS/Email"],
-  features: ["100% of leads captured automatically", "Response time reduced from 6 hours to under 1 minute", "Lead-to-call booking rate increased by 35%", "Automated follow-up SMS/email sequences"],
-  category: "Lead Generation",
+  title: "AI-Powered Content Creation Workflow",
+  description: "Marketing Agency: Automated content creation pipeline that transforms Google Drive files into AI-generated content distributed across multiple social platforms.",
+  technologies: ["Zapier", "Google Drive", "AI by Zapier", "LinkedIn", "Instagram", "Facebook"],
+  features: ["Automated content generation from uploaded files", "Multi-platform distribution", "Content filtering and optimization", "Cross-platform scheduling"],
+  category: "Content Marketing",
   client: "Digital Marketing Agency",
-  problem: "Leads from Facebook Ads were being manually entered into CRM, causing delays and missed opportunities.",
-  solution: "Integrated Facebook Lead Ads → Zapier → GoHighLevel CRM with automated follow-up sequences and pipeline tracking.",
-  automationImage: ghlAutomation,
-  platform: "GoHighLevel + Zapier",
-  detailedWorkflow: ["Facebook Lead Ad captures prospect information", "Zapier instantly triggers and sends data to GoHighLevel CRM", "Contact is automatically tagged and assigned to sales pipeline", "SMS sequence launches within 1 minute of form submission", "Email nurture sequence begins simultaneously", "Sales team receives real-time Slack notification", "Follow-up tasks automatically created in CRM"]
+  problem: "Manual content creation and distribution across multiple social platforms was time-consuming and inconsistent.",
+  solution: "Built Zapier workflow: Google Drive upload → AI content generation → automated posting to LinkedIn, Instagram, and Facebook.",
+  automationImage: zapierCaseStudy,
+  platform: "Zapier + AI",
+  detailedWorkflow: ["File uploaded to Google Drive triggers workflow", "Zapier filters by file type (mp4 format)", "AI by Zapier transcribes video content", "Second AI step creates optimized social media posts", "Content splits into platform-specific paths", "LinkedIn post created with professional tone", "Instagram content formatted with hashtags", "Facebook page post published automatically"]
 }, {
-  title: "E-commerce Order Management System",
-  description: "Online Store: Built comprehensive order tracking system connecting Shopify with Google Sheets and Slack for real-time inventory management.",
-  technologies: ["Shopify", "Make", "Google Sheets", "Slack"],
-  features: ["Saved 10+ hours/week in manual work", "Inventory errors reduced to zero", "Real-time sales performance visibility", "Automated low-stock alerts"],
-  category: "E-commerce",
-  client: "Online Store Owner",
-  problem: "Orders were being tracked manually, making it difficult to manage inventory and reporting.",
-  solution: "Built Make scenario: Shopify → Google Sheets → Slack with daily sales updates and inventory alerts.",
-  automationImage: makeAutomation,
-  platform: "Make.com + Shopify",
-  detailedWorkflow: ["New order placed on Shopify store", "Make.com scenario automatically triggered", "Order details instantly logged to Google Sheets", "Inventory levels updated in real-time", "Slack notification sent to fulfillment team", "Daily sales report generated automatically", "Low stock alerts trigger when inventory < 10 units", "Weekly performance summary emailed to owner"]
+  title: "Client Onboarding Automation System", 
+  description: "Professional Services: Streamlined client intake process connecting Google Forms to comprehensive onboarding workflow with automated task management.",
+  technologies: ["Make.com", "Google Forms", "Google Sheets", "Gmail", "Telegram", "Tools Integration"],
+  features: ["Complete onboarding automation", "Multi-step conditional workflows", "Automated client communication", "Task assignment and tracking"],
+  category: "Client Management",
+  client: "Consulting Firm",
+  problem: "New client onboarding required manual coordination across multiple tools and team members.",
+  solution: "Created Make.com automation: Google Forms → client database → automated email sequences → team notifications.",
+  automationImage: makeCaseStudy,
+  platform: "Make.com",
+  detailedWorkflow: ["Client submits Google Form", "Tools integration creates client folder", "Information added to client tracking sheet", "Automated welcome email sent via Gmail", "Team notification sent through Telegram", "Router determines client type and workflow path", "Conditional branches trigger appropriate onboarding sequences", "Follow-up tasks automatically assigned to team members"]
 }, {
-  title: "Multi-Platform SaaS Workflow",
-  description: "SaaS Startup: Streamlined customer onboarding by connecting payments, team notifications, and documentation across multiple platforms.",
-  technologies: ["n8n", "Slack", "Notion", "Stripe"],
-  features: ["Onboarding process went from 30 minutes manual → 100% automated", "Customer experience improved with instant onboarding emails", "Scaled to handle 5x more customers without extra staff", "Automated documentation creation"],
-  category: "SaaS Automation",
-  client: "SaaS Founder",
-  problem: "Customer onboarding was messy—payments, team notifications, and documentation were handled separately.",
-  solution: "Built n8n workflow: Stripe payment → Notion database → Slack channel → Welcome email automation.",
-  automationImage: n8nAutomation,
-  platform: "n8n + Stripe",
-  detailedWorkflow: ["Customer completes Stripe payment successfully", "n8n webhook receives payment confirmation", "New customer record created in Notion database", "Welcome email with login credentials sent automatically", "Slack notification posted to #new-customers channel", "Onboarding task list generated in Notion", "Customer added to appropriate email sequences", "Account provisioning completed automatically"]
+  title: "Telegram Expense Reporting System",
+  description: "Small Business: Automated expense tracking through Telegram bot integration with Google Sheets for daily, weekly, and monthly reporting.",
+  technologies: ["n8n", "Telegram", "Google Sheets", "Automated Reporting"],
+  features: ["Daily expense logging via Telegram", "Automated report generation", "Multi-timeframe reporting", "Real-time expense tracking"],
+  category: "Business Operations", 
+  client: "Small Business Owner",
+  problem: "Manual expense tracking was leading to missed deductions and poor financial visibility.",
+  solution: "Built n8n workflow: Telegram expense input → Google Sheets logging → automated daily/weekly/monthly reports.",
+  automationImage: n8nCaseStudy,
+  platform: "n8n + Telegram",
+  detailedWorkflow: ["Expense submitted via Telegram message", "n8n extracts expense data and categorizes", "Data mapped and added to Google Sheets", "Daily expense summary generated at 8PM", "Weekly reports compiled every Sunday", "Monthly reports created on 1st of each month", "Automated Telegram notifications sent with summaries", "Budget alerts triggered when limits exceeded"]
+}, {
+  title: "GoHighLevel Opportunity Management",
+  description: "Sales Team: Automated lead qualification and opportunity tracking system with conditional workflows based on appointment status.",
+  technologies: ["GoHighLevel", "CRM Automation", "Conditional Logic", "Opportunity Management"],
+  features: ["Automated opportunity creation", "Conditional workflow branching", "Lead status tracking", "Follow-up automation"],
+  category: "Sales Automation",
+  client: "Sales Organization",
+  problem: "Inconsistent lead follow-up and manual opportunity management was causing lost deals.",
+  solution: "Designed GHL workflow: Appointment triggers → conditional logic → automated opportunity management and follow-up.",
+  automationImage: ghlCaseStudy,
+  platform: "GoHighLevel",
+  detailedWorkflow: ["Appointment status trigger activates workflow", "Conditional logic checks if tags include no show", "Branch A: Lost tag added for no-shows", "Branch B: Opportunity created for attended appointments", "Opportunity status updated automatically", "Follow-up sequences triggered based on outcome", "Date formatting applied for tracking", "Workflow ends with appropriate next actions"]
 }];
 const Projects = () => {
   return <section id="projects" className="py-20 px-4 bg-muted/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
-            ⚡ Case Studies
+            Case Studies
           </h2>
           <p className="text-xl text-muted-foreground">
             Real automation solutions that transformed businesses
           </p>
         </div>
         
-        {/* Moving banner with lightning effect */}
+        {/* Moving banner */}
         <div className="overflow-hidden mb-12">
           <div className="animate-scroll-right whitespace-nowrap py-4">
-            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">⚡ AUTOMATION SUCCESS STORIES</span>
-            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">⚡ REAL RESULTS</span>
-            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">⚡ PROVEN SYSTEMS</span>
+            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">AUTOMATION SUCCESS STORIES</span>
+            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">REAL RESULTS</span>
+            <span className="text-6xl md:text-8xl font-bold text-primary/10 mr-8">PROVEN SYSTEMS</span>
           </div>
         </div>
         
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <Card key={index} className="overflow-hidden hover-lift bg-background/80 backdrop-blur-sm border border-border/50">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={project.automationImage} 
+                  alt={`${project.title} workflow diagram`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 left-4">
+                  <Badge variant="secondary" className="bg-background/90 text-foreground">
+                    {project.platform}
+                  </Badge>
+                </div>
+              </div>
+              
+              <CardHeader>
+                <div className="flex justify-between items-start mb-2">
+                  <Badge variant="outline" className="mb-2">{project.category}</Badge>
+                </div>
+                <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+              
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Technologies Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2">Key Results</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      {project.features.slice(0, 2).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <span className="text-primary mr-2">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" className="w-full mt-4">
+                        <Eye className="w-4 h-4 mr-2" />
+                        View Details
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl">{project.title}</DialogTitle>
+                        <DialogDescription className="text-base">
+                          {project.client} - {project.category}
+                        </DialogDescription>
+                      </DialogHeader>
+                      
+                      <div className="grid md:grid-cols-2 gap-6 mt-6">
+                        <div className="space-y-4">
+                          <div>
+                            <h4 className="font-bold text-lg mb-2">Challenge</h4>
+                            <p className="text-muted-foreground">{project.problem}</p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="font-bold text-lg mb-2">Solution</h4>
+                            <p className="text-muted-foreground">{project.solution}</p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="font-bold text-lg mb-2">Results Achieved</h4>
+                            <ul className="space-y-2">
+                              {project.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="flex items-start text-sm">
+                                  <span className="text-primary mr-2">✓</span>
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div>
+                            <h4 className="font-bold text-lg mb-2">Workflow Process</h4>
+                            <ol className="space-y-2">
+                              {project.detailedWorkflow.map((step, stepIndex) => (
+                                <li key={stepIndex} className="flex items-start text-sm">
+                                  <span className="bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs mr-3 mt-0.5 flex-shrink-0">
+                                    {stepIndex + 1}
+                                  </span>
+                                  {step}
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                          
+                          <div className="bg-muted/30 p-4 rounded-lg">
+                            <img 
+                              src={project.automationImage} 
+                              alt={`${project.title} workflow diagram`}
+                              className="w-full rounded-md"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
         
       </div>
     </section>;
