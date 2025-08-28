@@ -72,11 +72,16 @@ const Skills = () => {
                           <img 
                             src={tool.logo} 
                             alt={tool.name} 
-                            className={`h-12 w-12 object-contain transparent rounded ${
-                              ['Shopify', 'Stripe', 'Slack', 'Asana', 'GoHighLevel'].includes(tool.name) 
-                                ? 'mix-blend-multiply' 
-                                : ''
-                            }`}
+                            className="h-12 w-12 object-contain transparent rounded"
+                            style={
+                              ['Shopify', 'Stripe', 'Slack', 'Asana', 'GoHighLevel'].includes(tool.name)
+                                ? { 
+                                    filter: 'contrast(200%) brightness(1.2) saturate(1.5)',
+                                    mixBlendMode: 'darken',
+                                    backgroundColor: 'transparent'
+                                  }
+                                : {}
+                            }
                           />
                         ) : (
                           <div className={`text-4xl ${tool.color}`}>
