@@ -4,35 +4,35 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "CEO, NovaTech Solutions",
-    company: "NovaTech Solutions",
-    content: "Adrian's automation expertise transformed our lead management process. The Make.com workflows he built reduced our manual work by 80% and improved our response time dramatically.",
-    avatar: "SM",
+    name: "Marcus Thompson",
+    role: "Marketing Director",
+    company: "Digital Marketing Agency",
+    content: "Adrian built our AI content creation system using Zapier that completely transformed our workflow. We went from spending hours manually creating social media content to having everything automated across LinkedIn, Instagram, and Facebook. The AI-generated content is consistently high-quality and perfectly formatted for each platform.",
+    avatar: "MT",
     rating: 5
   },
   {
-    name: "Michael Chen",
-    role: "Operations Director",
-    company: "BrightPath Automation",
-    content: "The AI-powered proposal generator Adrian created is a game-changer. What used to take hours now takes minutes, and the quality is consistently excellent. Highly recommended!",
-    avatar: "MC",
+    name: "Lisa Rodriguez",
+    role: "Managing Partner", 
+    company: "Consulting Firm",
+    content: "The client onboarding automation Adrian created with Make.com has been a game changer for our business. What used to be a chaotic manual process is now completely streamlined. From the moment a client submits our Google Form, everything flows automatically - database updates, welcome emails, team notifications via Telegram. It's saved us countless hours.",
+    avatar: "LR",
     rating: 5
   },
   {
-    name: "Jennifer Rodriguez",
-    role: "Marketing Manager",
-    company: "Cookware Company",
-    content: "Adrian's GoHighLevel setup and email automation increased our customer retention by 45%. His attention to detail and mobile-responsive designs exceeded our expectations.",
-    avatar: "JR",
+    name: "David Kim",
+    role: "Business Owner",
+    company: "Small Business",
+    content: "Adrian's n8n expense tracking system through Telegram has given me complete visibility into my business expenses. I simply send a message to the bot and get automated daily, weekly, and monthly reports in Google Sheets. No more lost receipts or missed deductions. The ROI was immediate.",
+    avatar: "DK",
     rating: 5
   },
   {
-    name: "David Park",
-    role: "Founder",
-    company: "AI Software",
-    content: "Working with Adrian on our LinkedIn lead generation was fantastic. His empathetic messaging approach and systematic automation doubled our qualified leads.",
-    avatar: "DP",
+    name: "Rachel Foster",
+    role: "Sales Manager",
+    company: "Sales Organization", 
+    content: "The GoHighLevel opportunity management system Adrian designed has dramatically improved our sales process. The conditional workflows automatically handle appointment no-shows and create opportunities for qualified prospects. Our conversion rates have increased significantly since implementation.",
+    avatar: "RF",
     rating: 5
   }
 ];
