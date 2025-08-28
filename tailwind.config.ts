@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				'ubuntu': ['Ubuntu', 'sans-serif'],
 				'colfax': ['Inter', 'sans-serif'], // Using Inter as Colfax alternative
+				'futuristic': ['Orbitron', 'sans-serif'], // For "Build with RY" logo
 			},
 			colors: {
 				border: 'hsl(var(--border))',

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Zap, Menu, X } from "lucide-react";
+import { Zap, Menu, X, Moon, Sun } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +16,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { href: "#services", label: "Services" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#contact", label: "Contact" }
+    { href: "#about", label: "About" },
+    { href: "#work", label: "Work" },
+    { href: "#pricing", label: "Pricing" },
+    { href: "#faq", label: "FAQ" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -38,9 +38,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <h1 className="text-xl font-bold text-foreground flex items-center gap-2">
-              Build with RY
-              <Zap className="h-6 w-6 text-primary" />
+            <h1 className="font-futuristic text-xl font-bold text-foreground flex items-center gap-2 tracking-wider">
+              BUILD WITH RY
+              <Zap className="h-6 w-6 text-primary zap-spark cursor-pointer" />
             </h1>
           </div>
 
@@ -50,13 +50,22 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary smooth-animation font-medium"
+                className="font-colfax text-muted-foreground hover:text-primary smooth-animation font-medium"
               >
                 {item.label}
               </button>
             ))}
-            <Button variant="hero" size="sm">
-              Hire Me
+            
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="p-2 rounded-lg hover:bg-muted transition-colors"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
+            
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6">
+              Book a Call
             </Button>
           </div>
 
@@ -76,13 +85,23 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left text-muted-foreground hover:text-primary smooth-animation font-medium py-2"
+                className="block w-full text-left font-colfax text-muted-foreground hover:text-primary smooth-animation font-medium py-2"
               >
                 {item.label}
               </button>
             ))}
-            <Button variant="hero" size="sm" className="w-full mt-4">
-              Hire Me
+            
+            {/* Mobile Dark Mode Toggle */}
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="flex items-center gap-2 w-full text-left font-colfax text-muted-foreground hover:text-primary smooth-animation font-medium py-2"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDark ? 'Light Mode' : 'Dark Mode'}
+            </button>
+            
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full mt-4">
+              Book a Call
             </Button>
           </div>
         )}
