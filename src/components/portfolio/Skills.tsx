@@ -72,11 +72,7 @@ const Skills = () => {
                           <img 
                             src={tool.logo} 
                             alt={tool.name} 
-                            className="h-12 w-12 object-contain"
-                            style={{ 
-                              imageRendering: 'crisp-edges',
-                              background: 'white'
-                            }}
+                            className="h-12 w-12 object-contain bg-white rounded"
                           />
                         ) : (
                           <div className={`text-4xl ${tool.color}`}>
