@@ -74,9 +74,32 @@ const Hero = () => {
                 />
                 
                 {/* AHA moment thinking icon */}
-                <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
-                  <div className="bg-blue-500 rounded-full p-2 shadow-lg animate-bounce">
-                    <Lightbulb className="w-6 h-6 text-white" />
+                <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
+                  <div className="relative">
+                    {/* Radiating lines */}
+                    <div className="absolute inset-0 animate-pulse">
+                      {[...Array(8)].map((_, i) => (
+                        <div
+                          key={i}
+                          className="absolute w-1 h-4 bg-blue-400 rounded-full"
+                          style={{
+                            transform: `rotate(${i * 45}deg)`,
+                            transformOrigin: '2px 20px',
+                            top: '-8px',
+                            left: '50%',
+                            marginLeft: '-2px'
+                          }}
+                        />
+                      ))}
+                    </div>
+                    
+                    {/* Main icon container */}
+                    <div className="relative bg-blue-500 hover:bg-blue-400 rounded-full p-3 shadow-lg animate-bounce hover:shadow-blue-500/50 transition-all duration-300">
+                      <Lightbulb className="w-8 h-8 text-white drop-shadow-lg" />
+                      
+                      {/* Blue glow effect */}
+                      <div className="absolute inset-0 bg-blue-400 rounded-full blur-lg opacity-30 animate-pulse"></div>
+                    </div>
                   </div>
                 </div>
               </div>
