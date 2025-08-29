@@ -39,8 +39,8 @@ const Services = () => {
     <section id="services" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
-            Services I Offer
+          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-wider mb-4 text-gradient font-condensed">
+            What I Can Do
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive automation solutions to scale your business and streamline operations
