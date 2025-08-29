@@ -193,14 +193,6 @@ All colors MUST be HSL.
   .hover-glow {
     @apply transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)];
   }
-  
-  /* Bold condensed font for headlines like "What I Can Do" */
-  .font-condensed {
-    font-family: 'Arial Black', 'Helvetica Bold', system-ui, sans-serif;
-    font-weight: 900;
-    font-stretch: condensed;
-    letter-spacing: 0.05em;
-  }
 }
 
 @layer utilities {
