@@ -69,7 +69,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header with improved layout */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gradient">
+          <h2 className="section-heading mb-6">
             Case Studies
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

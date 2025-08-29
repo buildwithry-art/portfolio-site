@@ -48,7 +48,7 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
+          <h2 className="section-heading mb-4">
             Skills and Tools
           </h2>
           <p className="text-xl text-muted-foreground">

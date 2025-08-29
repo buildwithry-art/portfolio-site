@@ -141,6 +141,14 @@ All colors MUST be HSL.
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
   
+  /* Modern section heading style */
+  .section-heading {
+    @apply text-3xl md:text-5xl font-black tracking-tight leading-tight text-gradient;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-variation-settings: 'wght' 900;
+    letter-spacing: -0.02em;
+  }
+  
   /* Glass morphism effect for modern cards */
   .glass {
     background: rgba(var(--glass-bg));
