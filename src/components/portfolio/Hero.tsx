@@ -28,6 +28,12 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 hover-lift bg-primary hover:bg-primary-hover text-primary-foreground font-semibold"
+                onClick={() => {
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Work With Me
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -36,6 +42,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg" 
                 className="text-lg px-8 py-6 hover-lift border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
+                onClick={() => window.open('https://calendly.com/adriangdn/buildwithry', '_blank')}
               >
                 Book a Free Strategy Call
                 <Calendar className="ml-2 h-5 w-5" />
