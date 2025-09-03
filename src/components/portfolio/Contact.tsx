@@ -4,38 +4,25 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 px-4 bg-muted/50">
+  return <section id="contact" className="py-20 px-4 bg-muted/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-heading mb-4">
             Let's Work Together
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Ready to automate your business processes? Get in touch!
-          </p>
+          <p className="text-xl text-muted-foreground">Ready to automate your business processes? Get in touch with me!</p>
         </div>
         
         <div className="flex justify-center">
           <div className="max-w-2xl text-center space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always excited to discuss new automation projects and help businesses 
-                streamline their operations. Whether you need a complete system overhaul 
-                or specific workflow improvements, let's talk about how I can help.
-              </p>
+              
+              
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <a 
-                href="https://www.upwork.com/freelancers/~018dab48b65b2c0233" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
-              >
+              <a href="https://www.upwork.com/freelancers/~018dab48b65b2c0233" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start">
                 <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-6 w-6 object-contain" />
                 <div className="text-left">
                   <div className="font-semibold">Upwork</div>
@@ -43,12 +30,7 @@ const Contact = () => {
                 </div>
               </a>
               
-              <a 
-                href="https://www.onlinejobs.ph/jobseekers/info/1611430" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
-              >
+              <a href="https://www.onlinejobs.ph/jobseekers/info/1611430" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start">
                 <img src="/lovable-uploads/aaf7be47-a9c5-4bf6-9986-5f137ce5cfb4.png" alt="OnlineJobs.ph" className="h-6 w-6 object-contain" />
                 <div className="text-left">
                   <div className="font-semibold">OnlineJobs.ph</div>
@@ -56,12 +38,7 @@ const Contact = () => {
                 </div>
               </a>
               
-              <a 
-                href="https://www.linkedin.com/in/adrianryan-/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
-              >
+              <a href="https://www.linkedin.com/in/adrianryan-/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start">
                 <img src="/lovable-uploads/034df8e8-1c76-419e-9cc9-373df97b9259.png" alt="LinkedIn" className="h-6 w-6 object-contain" />
                 <div className="text-left">
                   <div className="font-semibold">LinkedIn</div>
@@ -69,10 +46,7 @@ const Contact = () => {
                 </div>
               </a>
               
-              <a 
-                href="mailto:adrian@buildwithry.com" 
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
-              >
+              <a href="mailto:adrian@buildwithry.com" className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start">
                 <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
                 <div className="text-left">
                   <div className="font-semibold">Email</div>
@@ -83,8 +57,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
