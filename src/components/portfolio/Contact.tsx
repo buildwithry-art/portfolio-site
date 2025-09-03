@@ -18,9 +18,8 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-8">
+        <div className="flex justify-center">
+          <div className="max-w-2xl text-center space-y-8">
             <div>
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -30,15 +29,15 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <a 
                 href="https://www.upwork.com/freelancers/~018dab48b65b2c0233" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
               >
                 <img src="/lovable-uploads/9f747b14-dd4b-4a75-a1c1-86eb6e38c503.png" alt="Upwork" className="h-6 w-6 object-contain" />
-                <div>
+                <div className="text-left">
                   <div className="font-semibold">Upwork</div>
                   <div className="text-muted-foreground">View my Upwork profile</div>
                 </div>
@@ -48,10 +47,10 @@ const Contact = () => {
                 href="https://www.onlinejobs.ph/jobseekers/info/1611430" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
               >
                 <img src="/lovable-uploads/aaf7be47-a9c5-4bf6-9986-5f137ce5cfb4.png" alt="OnlineJobs.ph" className="h-6 w-6 object-contain" />
-                <div>
+                <div className="text-left">
                   <div className="font-semibold">OnlineJobs.ph</div>
                   <div className="text-muted-foreground">View my OnlineJobs.ph profile</div>
                 </div>
@@ -61,10 +60,10 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/adrianryan-/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
               >
                 <img src="/lovable-uploads/034df8e8-1c76-419e-9cc9-373df97b9259.png" alt="LinkedIn" className="h-6 w-6 object-contain" />
-                <div>
+                <div className="text-left">
                   <div className="font-semibold">LinkedIn</div>
                   <div className="text-muted-foreground">Connect with me for opportunities</div>
                 </div>
@@ -72,66 +71,16 @@ const Contact = () => {
               
               <a 
                 href="mailto:adrian@buildwithry.com" 
-                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity justify-center sm:justify-start"
               >
                 <img src="/lovable-uploads/adcf350d-7554-4ebd-a80b-8287232b45ea.png" alt="Gmail" className="h-6 w-6 object-contain" />
-                <div>
+                <div className="text-left">
                   <div className="font-semibold">Email</div>
                   <div className="text-muted-foreground">Send me an email</div>
                 </div>
               </a>
             </div>
           </div>
-          
-          {/* Contact Form */}
-          <Card className="glass">
-            <CardHeader>
-              <CardTitle>Send Me a Message</CardTitle>
-              <CardDescription>
-                Tell me about your automation needs and let's discuss how I can help
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="firstName">First Name</Label>
-                  <Input id="firstName" placeholder="John" className="mt-1" />
-                </div>
-                <div>
-                  <Label htmlFor="lastName">Last Name</Label>
-                  <Input id="lastName" placeholder="Doe" className="mt-1" />
-                </div>
-              </div>
-              
-              <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="john@example.com" className="mt-1" />
-              </div>
-              
-              <div>
-                <Label htmlFor="company">Company (Optional)</Label>
-                <Input id="company" placeholder="Your Company" className="mt-1" />
-              </div>
-              
-              <div>
-                <Label htmlFor="project">Project Type</Label>
-                <Input id="project" placeholder="e.g., GoHighLevel Setup, Lead Generation, etc." className="mt-1" />
-              </div>
-              
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Tell me about your automation needs, current challenges, and goals..."
-                  className="mt-1 min-h-[120px]"
-                />
-              </div>
-              
-              <Button variant="gradient" size="lg" className="w-full">
-                Send Message
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
