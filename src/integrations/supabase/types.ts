@@ -405,6 +405,36 @@ export type Database = {
           },
         ]
       }
+      form_submissions: {
+        Row: {
+          created_at: string
+          email: string | null
+          form_name: string
+          id: string
+          message: string | null
+          metadata: Json | null
+          name: string | null
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          form_name: string
+          id?: string
+          message?: string | null
+          metadata?: Json | null
+          name?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          form_name?: string
+          id?: string
+          message?: string | null
+          metadata?: Json | null
+          name?: string | null
+        }
+        Relationships: []
+      }
       insights_by_period: {
         Row: {
           id: number
@@ -1243,7 +1273,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_admin: {
+        Args: { user_id: string }
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never
