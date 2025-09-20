@@ -70,7 +70,7 @@ const Hero = () => {
                 {/* HighLevel Badge */}
                 <div className="absolute top-4 left-4">
                   <a href="https://directory.gohighlevel.com/pila/certified-admins/adrian-agdan?from=badge" title="Find me on HighLevel Directory" target="_blank">
-                    <img src="https://directory.gohighlevel.com/images/HL-Accelerator-1.png" alt="HighLevel Certified Admin" className="h-20 w-auto border-none hover:scale-125 transition-all duration-300 ease-out" />
+                    <img src="https://directory.gohighlevel.com/images/HL-Accelerator-1.png" alt="HighLevel Certified Admin" className="h-24 w-auto border-none hover:scale-150 transition-all duration-300 ease-out" />
                   </a>
                 </div>
                 
