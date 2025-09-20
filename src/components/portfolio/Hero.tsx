@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Lightbulb } from "lucide-react";
 import automationIcon from "@/assets/automation-icon.png";
 import adrianPhoto from "/lovable-uploads/892fb2d8-1fb5-4b9c-9831-7db3e194f5e9.png";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-background via-muted/30 to-background">
+  return <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -25,25 +23,18 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 hover-lift bg-primary hover:bg-primary-hover text-primary-foreground font-semibold"
-                onClick={() => {
-                  const element = document.querySelector("#contact");
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
+              <Button size="lg" className="text-lg px-8 py-6 hover-lift bg-primary hover:bg-primary-hover text-primary-foreground font-semibold" onClick={() => {
+              const element = document.querySelector("#contact");
+              if (element) {
+                element.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }
+            }}>
                 Work With Me
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6 hover-lift border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
-                onClick={() => window.open('https://calendly.com/buildwithry/30min', '_blank')}
-              >
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 hover-lift border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold" onClick={() => window.open('https://calendly.com/buildwithry/30min', '_blank')}>
                 Book a Free Strategy Call
                 <Calendar className="ml-2 h-5 w-5" />
               </Button>
@@ -74,11 +65,7 @@ const Hero = () => {
               
               {/* Main photo container */}
               <div className="relative overflow-hidden rounded-2xl shadow-strong group-hover:shadow-xl transition-all duration-300 hover-lift">
-                <img 
-                  src={adrianPhoto}
-                  alt="Adrian - Automation Specialist" 
-                  className="w-96 h-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src={adrianPhoto} alt="Adrian - Automation Specialist" className="w-96 h-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                 
                 {/* HighLevel Badge */}
                 <div className="absolute top-4 left-4">
@@ -92,28 +79,11 @@ const Hero = () => {
                   <div className="relative">
                     {/* Radiating lines */}
                     <div className="absolute inset-0 animate-pulse">
-                      {[...Array(8)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="absolute w-1 h-4 bg-blue-400 rounded-full"
-                          style={{
-                            transform: `rotate(${i * 45}deg)`,
-                            transformOrigin: '2px 20px',
-                            top: '-8px',
-                            left: '50%',
-                            marginLeft: '-2px'
-                          }}
-                        />
-                      ))}
+                      {[...Array(8)].map((_, i) => {})}
                     </div>
                     
                     {/* Main icon container */}
-                    <div className="relative bg-blue-500 hover:bg-blue-400 rounded-full p-3 shadow-lg animate-bounce hover:shadow-blue-500/50 transition-all duration-300">
-                      <Lightbulb className="w-8 h-8 text-white drop-shadow-lg" />
-                      
-                      {/* Blue glow effect */}
-                      <div className="absolute inset-0 bg-blue-400 rounded-full blur-lg opacity-30 animate-pulse"></div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -121,8 +91,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
