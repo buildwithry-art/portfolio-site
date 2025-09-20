@@ -54,6 +54,12 @@ const Contact = () => {
                 </div>
               </a>
             </div>
+            
+            <div className="flex justify-center mt-8">
+              <a href="https://directory.gohighlevel.com/pila/certified-admins/adrian-agdan?from=badge" title="Find me on HighLevel Directory" target="_blank" className="hover:opacity-80 transition-opacity">
+                <img src="https://directory.gohighlevel.com/images/HL-Accelerator-1.png" alt="HighLevel Certified Admin" className="border-0" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
