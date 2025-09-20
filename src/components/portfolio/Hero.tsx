@@ -79,7 +79,6 @@ const Hero = () => {
                   <div className="relative">
                     {/* Radiating lines */}
                     <div className="absolute inset-0 animate-pulse">
-                      {[...Array(8)].map((_, i) => {})}
                     </div>
                     
                     {/* Main icon container */}
