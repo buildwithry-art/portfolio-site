@@ -80,6 +80,13 @@ const Hero = () => {
                   className="w-96 h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
                 
+                {/* HighLevel Badge */}
+                <div className="absolute top-4 left-4">
+                  <a href="https://directory.gohighlevel.com/pila/certified-admins/adrian-agdan?from=badge" title="Find me on HighLevel Directory" target="_blank">
+                    <img src="https://directory.gohighlevel.com/images/HL-Accelerator-1.png" alt="HighLevel Certified Admin" className="h-12 w-auto border-none hover:opacity-80 transition-opacity" />
+                  </a>
+                </div>
+                
                 {/* AHA moment thinking icon */}
                 <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
                   <div className="relative">
