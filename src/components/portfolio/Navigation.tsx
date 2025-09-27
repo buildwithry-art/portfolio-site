@@ -24,8 +24,7 @@ const Navigation = () => {
   const navItems = [
     { href: "#services", label: "Services" },
     { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Case Studies" },
-    { href: "#testimonials", label: "Testimonials" }
+    { href: "#projects", label: "Case Studies" }
   ];
 
   const scrollToSection = (href: string) => {
