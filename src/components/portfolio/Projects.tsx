@@ -45,7 +45,7 @@ const projects = [{
   platform: "n8n + Telegram",
   detailedWorkflow: ["Expense submitted via Telegram message", "n8n extracts expense data and categorizes", "Data mapped and added to Google Sheets", "Daily expense summary generated at 8PM", "Weekly reports compiled every Sunday", "Monthly reports created on 1st of each month", "Automated Telegram notifications sent with summaries", "Budget alerts triggered when limits exceeded"]
 }, {
-  title: "GoHighLevel Opportunity Management",
+  title: "No show Workflow",
   description: "Sales Team: Automated lead qualification and opportunity tracking system with conditional workflows based on appointment status.",
   technologies: ["GoHighLevel", "CRM Automation", "Conditional Logic", "Opportunity Management"],
   features: ["Automated opportunity creation", "Conditional workflow branching", "Lead status tracking", "Follow-up automation"],
