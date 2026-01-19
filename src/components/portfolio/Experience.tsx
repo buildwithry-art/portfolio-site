@@ -6,7 +6,7 @@ const experiences = [
   {
     title: "GHL Specialist & Automation Consultant",
     company: "Romea.AI",
-    period: "Oct 2025 - Present",
+    period: "Oct 2025 - Jan 2026",
     location: "Remote",
     type: "Full-Time",
     achievements: [
@@ -34,7 +34,7 @@ const experiences = [
   {
     title: "E-Commerce/GHL Admin",
     company: "Cookware Company",
-    period: "2023 - 2025",
+    period: "Dec 2023 - Mar 2025",
     location: "Los Angeles, US",
     type: "Full-Time",
     achievements: [
