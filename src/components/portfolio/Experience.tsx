@@ -4,32 +4,32 @@ import { Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "Automation Specialist (Make.com)",
-    company: "NovaTech Solutions",
+    title: "GHL Specialist & Automation Consultant",
+    company: "Romea.AI",
     period: "Mar 2025 - April 2025",
     location: "Remote",
     type: "Short-Term Project",
     achievements: [
-      "Designed and deployed lead management automation workflows using Make.com",
-      "Integrated Google Sheets, Gmail, and Calendars for efficient client follow-ups",
-      "Built multi-step processes that automatically tracked leads and sent follow-up emails",
-      "Updated CRM records to improve conversion tracking"
+      "GHL onboarding setup and GHL workflow automations",
+      "Conducted GHL training for clients needing to learn more about the CRM",
+      "Webhook entry points automation in GHL",
+      "Calendars and chat widget setup",
+      "Pipeline setup and configuration"
     ],
-    technologies: ["Make.com", "Google Sheets", "Gmail", "Calendar Integration"]
+    technologies: ["GoHighLevel", "Webhooks", "CRM Training", "Workflow Automation"]
   },
   {
-    title: "Workflow Automation Consultant (n8n)",
-    company: "BrightPath Automation",
+    title: "Outreach & Automation Specialist",
+    company: "DPX AI Solution",
     period: "Nov 2024 - Jan 2025",
     location: "Remote",
     type: "Consulting",
     achievements: [
-      "Developed an AI-powered proposal generator workflow in n8n",
-      "Integrated Google Slides and OpenAI to create client-ready proposals within minutes",
-      "Automated onboarding workflows including data capture and folder creation",
-      "Reduced manual tasks and setup time by 70%"
+      "Manual outreach on Facebook and LinkedIn",
+      "Instantly cold email setup and management",
+      "Automation via GoHighLevel"
     ],
-    technologies: ["n8n", "Google Slides", "OpenAI", "Workflow Automation"]
+    technologies: ["Facebook", "LinkedIn", "Instantly", "GoHighLevel"]
   },
   {
     title: "E-Commerce/GHL Admin",
