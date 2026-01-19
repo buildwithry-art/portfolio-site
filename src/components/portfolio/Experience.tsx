@@ -6,9 +6,9 @@ const experiences = [
   {
     title: "GHL Specialist & Automation Consultant",
     company: "Romea.AI",
-    period: "Mar 2025 - April 2025",
+    period: "Oct 2025 - Present",
     location: "Remote",
-    type: "Short-Term Project",
+    type: "Full-Time",
     achievements: [
       "GHL onboarding setup and GHL workflow automations",
       "Conducted GHL training for clients needing to learn more about the CRM",
@@ -20,10 +20,10 @@ const experiences = [
   },
   {
     title: "Outreach & Automation Specialist",
-    company: "DPX AI Solution",
-    period: "Nov 2024 - Jan 2025",
+    company: "DPX AI Solutions",
+    period: "Mar 2025 - Dec 2025",
     location: "Remote",
-    type: "Consulting",
+    type: "Part-Time",
     achievements: [
       "Manual outreach on Facebook and LinkedIn",
       "Instantly cold email setup and management",
