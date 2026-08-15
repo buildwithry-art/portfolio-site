@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+const BASE = import.meta.env.BASE_URL;
+
 const skillCategories = [
   {
     category: "Automation Platforms",
@@ -28,21 +30,19 @@ const skillCategories = [
   }
 ];
 
-const uploadAsset = (fileName: string) => `${import.meta.env.BASE_URL}lovable-uploads/${fileName}`;
-
 const toolLogos: Array<{ name: string; logo: string; isImage?: boolean; color?: string }> = [
-  { name: "Make", logo: uploadAsset("f15c7435-1271-49b9-bdad-f8a3d32a0d96.png"), isImage: true },
-  { name: "Zapier", logo: uploadAsset("30c27be1-6af6-4eab-90b2-91c98060f650.png"), isImage: true },
-  { name: "GoHighLevel", logo: uploadAsset("0340a356-7341-4d91-862e-5c9c3cab01a6.png"), isImage: true },
-  { name: "n8n", logo: uploadAsset("c63b961b-4b50-4cb6-b67f-81379d4ddf08.png"), isImage: true },
-  { name: "Supabase", logo: uploadAsset("9350b8c6-c661-4b02-83e9-104503868b53.png"), isImage: true },
-  { name: "Airtable", logo: uploadAsset("07fe4fb3-fe96-49d0-b139-0661d025aac4.png"), isImage: true },
-  { name: "Shopify", logo: uploadAsset("1ff04e66-8787-43cc-8330-a31015e5fb5f.png"), isImage: true },
-  { name: "Stripe", logo: uploadAsset("b5921b0a-1425-4503-9614-12d902642cf8.png"), isImage: true },
-  { name: "Twilio", logo: uploadAsset("5e34f1ab-63df-40f7-a73c-06850eeaefc7.png"), isImage: true },
-  { name: "Canva", logo: uploadAsset("b69b54a6-4046-48ad-b1c8-1709499985e7.png"), isImage: true },
-  { name: "Slack", logo: uploadAsset("729b14df-7b5c-478f-a162-f79980da1ac1.png"), isImage: true },
-  { name: "Asana", logo: uploadAsset("0430b2e9-867b-484e-b727-9f05b427238a.png"), isImage: true }
+  { name: "Make", logo: `${BASE}lovable-uploads/f15c7435-1271-49b9-bdad-f8a3d32a0d96.png`, isImage: true },
+  { name: "Zapier", logo: `${BASE}lovable-uploads/30c27be1-6af6-4eab-90b2-91c98060f650.png`, isImage: true },
+  { name: "GoHighLevel", logo: `${BASE}lovable-uploads/0340a356-7341-4d91-862e-5c9c3cab01a6.png`, isImage: true },
+  { name: "n8n", logo: `${BASE}lovable-uploads/c63b961b-4b50-4cb6-b67f-81379d4ddf08.png`, isImage: true },
+  { name: "Supabase", logo: `${BASE}lovable-uploads/9350b8c6-c661-4b02-83e9-104503868b53.png`, isImage: true },
+  { name: "Airtable", logo: `${BASE}lovable-uploads/07fe4fb3-fe96-49d0-b139-0661d025aac4.png`, isImage: true },
+  { name: "Shopify", logo: `${BASE}lovable-uploads/1ff04e66-8787-43cc-8330-a31015e5fb5f.png`, isImage: true },
+  { name: "Stripe", logo: `${BASE}lovable-uploads/b5921b0a-1425-4503-9614-12d902642cf8.png`, isImage: true },
+  { name: "Twilio", logo: `${BASE}lovable-uploads/5e34f1ab-63df-40f7-a73c-06850eeaefc7.png`, isImage: true },
+  { name: "Canva", logo: `${BASE}lovable-uploads/b69b54a6-4046-48ad-b1c8-1709499985e7.png`, isImage: true },
+  { name: "Slack", logo: `${BASE}lovable-uploads/729b14df-7b5c-478f-a162-f79980da1ac1.png`, isImage: true },
+  { name: "Asana", logo: `${BASE}lovable-uploads/0430b2e9-867b-484e-b727-9f05b427238a.png`, isImage: true }
 ];
 
 const Skills = () => {

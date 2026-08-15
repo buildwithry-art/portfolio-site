@@ -8,13 +8,10 @@ import zapierCaseStudy from "/lovable-uploads/2f07a1c7-8827-4169-9c4d-6353aa8245
 import makeCaseStudy from "/lovable-uploads/833c006f-8a7a-4522-8686-83e73cd9afa2.png";
 import n8nCaseStudy from "/lovable-uploads/7d1106cf-f77a-469f-9c81-5dbbcf6626a8.png";
 import ghlCaseStudy from "/lovable-uploads/0382c638-b3db-4b63-806e-a772fbaeb008.png";
-import vapiThumbnailAsset from "../../assets/vapi-receptionist-thumbnail.jpg.asset.json";
-import asmrThumbnailAsset from "../../assets/asmr-ai-video-creator-thumbnail.png.asset.json";
-import avaThumbnailAsset from "../../assets/ghl-conversation-ai-ava.png.asset.json";
+import asmrThumbnail from "/lovable-uploads/asmr-ai-video-creator-thumbnail.png";
+import vapiThumbnail from "/lovable-uploads/vapi-ai-receptionist.jpg";
+import metaReceptionistThumbnail from "/lovable-uploads/ai-meta-receptionist-v3.png";
 
-const vapiThumbnail = vapiThumbnailAsset.url;
-const asmrThumbnail = asmrThumbnailAsset.url;
-const avaThumbnail = avaThumbnailAsset.url;
 const projects = [{
   title: "VAPI AI Receptionist",
   description: "Service Business: A voice AI receptionist that answers calls 24/7, qualifies leads, books appointments, and syncs everything into the CRM in real time.",
@@ -28,6 +25,28 @@ const projects = [{
   platform: "VAPI + n8n + GHL + Supabase",
   videoUrl: "https://kommodo.ai/recordings/XxGUQuRANUup1LGh0Tg9",
   detailedWorkflow: ["Inbound call routed to VAPI AI receptionist", "AI greets caller and qualifies the inquiry", "n8n webhook triggered with structured call data", "Contact created or updated in GoHighLevel", "Appointment booked into GHL calendar via voice", "Conversation transcript stored in Supabase", "Follow-up SMS/email sequence triggered in GHL", "Claude Code used to build and refine prompts and integrations"]
+}, {
+  title: "AI Meta Receptionist",
+  description: "Dermatology Fellowship: An AI receptionist for Instagram and Facebook that reads comments and DMs, replies like a human, extracts contact details, and pushes qualified leads into the GHL pipeline automatically.",
+  technologies: ["GoHighLevel", "n8n", "Instagram Graph API", "Facebook Graph API", "OpenAI", "Slack"],
+  features: ["Auto-detects IG/FB comment and DM leads", "Human-sounding personalized replies in 5–20 seconds", "Extracts phone/email even with typos", "Auto-moves leads through CRM pipeline stages"],
+  category: "Social Media AI",
+  client: "Dermatology Fellowship",
+  problem: "Social media leads from Instagram and Facebook comments and DMs were slipping through the cracks — coordinators had to manually read every message, chase contact details, and create CRM records by hand.",
+  solution: "Built an AI social media receptionist on n8n and GoHighLevel that monitors Meta comments and messages, responds with tailored human-like replies, cleans and extracts contact info, creates opportunities, and escalates qualified leads through pipeline stages — with Slack alerts for errors and API limits.",
+  automationImage: metaReceptionistThumbnail,
+  platform: "GHL + n8n + Meta APIs",
+  videoUrl: "https://kommodo.ai/recordings/0n2i09stXxdQADTRfDgV",
+  detailedWorkflow: [
+    "Monitors Instagram and Facebook comments and direct messages",
+    "AI classifies intent and identifies interested leads",
+    "Sends a tailored, human-sounding reply within 5–20 seconds",
+    "Extracts phone numbers and emails, correcting common typos",
+    "Creates or updates the contact and opportunity in GoHighLevel",
+    "Moves qualified leads through the correct pipeline stage automatically",
+    "Knowledge base of business context powers accurate AI answers",
+    "Automation logs push real-time Slack alerts on errors or API limits"
+  ]
 }, {
   title: "ASMR AI Video Creator",
   description: "Content Creator: Fully automated daily ASMR video generation and publishing pipeline that creates, renders, and posts videos to Facebook and YouTube with zero manual work.",
@@ -59,19 +78,6 @@ const projects = [{
     { label: "YouTube Shorts sample", url: "https://www.youtube.com/shorts/yudXdZTOQPM" }
   ]
 }, {
-  title: "GHL Conversation AI \"Agent AVA\"",
-  description: "Multi-channel sales engagement: an AI chat agent built inside GoHighLevel that responds to leads 24/7 across Instagram, Facebook Messenger, and SMS — qualifying prospects, booking appointments, and moving opportunities to close without human delay.",
-  technologies: ["GoHighLevel", "Conversation AI", "Instagram", "Facebook Messenger", "SMS", "Appointment Scheduling"],
-  features: ["24/7 AI conversations across DMs and text", "Automated lead qualification and smart routing", "Instant appointment booking into GHL calendar", "Conversion-focused follow-up that saves time and closes more deals"],
-  category: "Conversational AI",
-  client: "Sales & Service Business",
-  problem: "Leads were going cold and opportunities were lost because manual responses couldn't keep up with messages arriving around the clock across Instagram, Messenger, and SMS.",
-  solution: "Configured \"Agent AVA\" using GoHighLevel's Conversation AI to greet incoming messages, answer questions, qualify intent, and book appointments directly into the GHL calendar — all while routing hot leads to the sales team.",
-  automationImage: avaThumbnail,
-  platform: "GoHighLevel Conversation AI",
-  videoUrl: "https://kommodo.ai/recordings/xPGDgbjahr1RKd5XzECV?onlyRecording=1",
-  detailedWorkflow: ["Lead sends a message via Instagram, Facebook Messenger, or SMS", "Agent AVA greets them instantly inside GoHighLevel Conversations", "AI asks qualifying questions to identify need and urgency", "Qualified leads are offered available appointment slots", "Appointment is booked directly into the GHL calendar", "Hot prospects are tagged and routed to the sales team for follow-up", "Automated reminders and nurture sequences keep the opportunity warm", "All conversation history is tracked in the contact record for full visibility"]
-}, {
   title: "AI-Powered Content Creation Workflow",
   description: "Marketing Agency: Automated content creation pipeline that transforms Google Drive files into AI-generated content distributed across multiple social platforms.",
   technologies: ["Zapier", "Google Drive", "AI by Zapier", "LinkedIn", "Instagram", "Facebook"],
@@ -84,7 +90,7 @@ const projects = [{
   platform: "Zapier + AI",
   detailedWorkflow: ["File uploaded to Google Drive triggers workflow", "Zapier filters by file type (mp4 format)", "AI by Zapier transcribes video content", "Second AI step creates optimized social media posts", "Content splits into platform-specific paths", "LinkedIn post created with professional tone", "Instagram content formatted with hashtags", "Facebook page post published automatically"]
 }, {
-  title: "Client Onboarding Automation System", 
+  title: "Client Onboarding Automation System",
   description: "Professional Services: Streamlined client intake process connecting Google Forms to comprehensive onboarding workflow with automated task management.",
   technologies: ["Make.com", "Google Forms", "Google Sheets", "Gmail", "Telegram", "Tools Integration"],
   features: ["Complete onboarding automation", "Multi-step conditional workflows", "Automated client communication", "Task assignment and tracking"],
@@ -100,7 +106,7 @@ const projects = [{
   description: "Small Business: Automated expense tracking through Telegram bot integration with Google Sheets for daily, weekly, and monthly reporting.",
   technologies: ["n8n", "Telegram", "Google Sheets", "Automated Reporting"],
   features: ["Daily expense logging via Telegram", "Automated report generation", "Multi-timeframe reporting", "Real-time expense tracking"],
-  category: "Business Operations", 
+  category: "Business Operations",
   client: "Small Business Owner",
   problem: "Manual expense tracking was leading to missed deductions and poor financial visibility.",
   solution: "Built n8n workflow: Telegram expense input → Google Sheets logging → automated daily/weekly/monthly reports.",
@@ -178,8 +184,8 @@ const Projects = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
                         {(project as any).videoUrl ? (
-                          <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                            <Play className="w-7 h-7 text-primary-foreground ml-1" fill="currentColor" />
+                          <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                            <Play className="w-7 h-7 text-black ml-1" fill="black" />
                           </div>
                         ) : (
                           <Eye className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -324,7 +330,7 @@ const Projects = () => {
                             </div>
                           )}
                         </div>
-                        
+
                         <div className="space-y-4">
                           <div>
                             <h4 className="font-bold text-lg mb-2">Workflow Process</h4>

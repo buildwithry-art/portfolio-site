@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Lightbulb } from "lucide-react";
 import automationIcon from "@/assets/automation-icon.png";
-import adrianPhoto from "/lovable-uploads/892fb2d8-1fb5-4b9c-9831-7db3e194f5e9.png";
+
+const adrianPhoto = `${import.meta.env.BASE_URL}lovable-uploads/892fb2d8-1fb5-4b9c-9831-7db3e194f5e9.png`;
+
 const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-background via-muted/30 to-background">
+  return <section className="relative min-h-screen flex items-center justify-center px-4 pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

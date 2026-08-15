@@ -13,14 +13,14 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
-      enableSystem
+      defaultTheme="dark"
+      enableSystem={false}
       disableTransitionOnChange
     >
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/portfolio-site/">
+        <BrowserRouter basename="/portfolio/">
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
