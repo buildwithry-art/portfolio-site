@@ -49,6 +49,28 @@ const projects = [{
     "Automation logs push real-time Slack alerts on errors or API limits"
   ]
 }, {
+  title: "GHL Conversation AI \"Agent AVA\"",
+  description: "Multi-channel AI sales agent that automates conversations across Instagram, Facebook Messenger, and SMS — qualifying leads, booking appointments, and driving conversions 24/7 without human intervention.",
+  technologies: ["GoHighLevel", "GHL Conversation AI", "Instagram", "Facebook Messenger", "SMS", "OpenAI"],
+  features: ["24/7 AI conversations across IG, Messenger, and SMS", "Automatic lead qualification and routing", "Real-time appointment booking", "Human-like responses that convert"],
+  category: "Conversational AI",
+  client: "Sales & Service Business",
+  problem: "Leads were coming in through Instagram DMs, Facebook comments, and SMS but responses were slow or missed entirely, causing qualified prospects to go cold.",
+  solution: "Built Agent AVA inside GoHighLevel Conversation AI to handle multi-channel inbound conversations, qualify leads with natural dialogue, answer common questions, and book appointments directly into the GHL calendar.",
+  automationImage: ghlConversationAvaThumbnail.url,
+  platform: "GHL Conversation AI",
+  videoUrl: "https://kommodo.ai/recordings/xPGDgbjahr1RKd5XzECV?onlyRecording=1",
+  detailedWorkflow: [
+    "Inbound message received on Instagram, Facebook Messenger, or SMS",
+    "GHL Conversation AI classifies intent and greets the lead naturally",
+    "Agent AVA qualifies the lead through conversational questions",
+    "Answers FAQs using trained business knowledge base",
+    "Books appointments directly into GoHighLevel calendar",
+    "Routes hot leads to a human salesperson via notifications",
+    "Captures contact info and conversation history in the CRM",
+    "Runs 24/7 so no lead is left waiting"
+  ]
+}, {
   title: "ASMR AI Video Creator",
   description: "Content Creator: Fully automated daily ASMR video generation and publishing pipeline that creates, renders, and posts videos to Facebook and YouTube with zero manual work.",
   technologies: ["n8n", "Google Gemini", "Google Veo", "Google Sheets", "Facebook Graph API", "YouTube API", "Gmail"],
