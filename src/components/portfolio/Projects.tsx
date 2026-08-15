@@ -11,6 +11,7 @@ import ghlCaseStudy from "/lovable-uploads/0382c638-b3db-4b63-806e-a772fbaeb008.
 import asmrThumbnail from "/lovable-uploads/asmr-ai-video-creator-thumbnail.png";
 import vapiThumbnail from "/lovable-uploads/vapi-ai-receptionist.jpg";
 import metaReceptionistThumbnail from "/lovable-uploads/ai-meta-receptionist-v3.png";
+import ghlConversationAvaThumbnail from "@/assets/ghl-conversation-ai-ava.png.asset.json";
 
 const projects = [{
   title: "VAPI AI Receptionist",
