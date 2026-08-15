@@ -10,9 +10,11 @@ import n8nCaseStudy from "/lovable-uploads/7d1106cf-f77a-469f-9c81-5dbbcf6626a8.
 import ghlCaseStudy from "/lovable-uploads/0382c638-b3db-4b63-806e-a772fbaeb008.png";
 import vapiThumbnailAsset from "../../assets/vapi-receptionist-thumbnail.jpg.asset.json";
 import asmrThumbnailAsset from "../../assets/asmr-ai-video-creator-thumbnail.png.asset.json";
+import avaThumbnailAsset from "../../assets/ghl-conversation-ai-ava.png.asset.json";
 
 const vapiThumbnail = vapiThumbnailAsset.url;
 const asmrThumbnail = asmrThumbnailAsset.url;
+const avaThumbnail = avaThumbnailAsset.url;
 const projects = [{
   title: "VAPI AI Receptionist",
   description: "Service Business: A voice AI receptionist that answers calls 24/7, qualifies leads, books appointments, and syncs everything into the CRM in real time.",
@@ -56,6 +58,19 @@ const projects = [{
     { label: "Facebook Reel sample", url: "https://www.facebook.com/reel/1245462175306768/?s=single_unit" },
     { label: "YouTube Shorts sample", url: "https://www.youtube.com/shorts/yudXdZTOQPM" }
   ]
+}, {
+  title: "GHL Conversation AI \"Agent AVA\"",
+  description: "Multi-channel sales engagement: an AI chat agent built inside GoHighLevel that responds to leads 24/7 across Instagram, Facebook Messenger, and SMS — qualifying prospects, booking appointments, and moving opportunities to close without human delay.",
+  technologies: ["GoHighLevel", "Conversation AI", "Instagram", "Facebook Messenger", "SMS", "Appointment Scheduling"],
+  features: ["24/7 AI conversations across DMs and text", "Automated lead qualification and smart routing", "Instant appointment booking into GHL calendar", "Conversion-focused follow-up that saves time and closes more deals"],
+  category: "Conversational AI",
+  client: "Sales & Service Business",
+  problem: "Leads were going cold and opportunities were lost because manual responses couldn't keep up with messages arriving around the clock across Instagram, Messenger, and SMS.",
+  solution: "Configured \"Agent AVA\" using GoHighLevel's Conversation AI to greet incoming messages, answer questions, qualify intent, and book appointments directly into the GHL calendar — all while routing hot leads to the sales team.",
+  automationImage: avaThumbnail,
+  platform: "GoHighLevel Conversation AI",
+  videoUrl: "https://kommodo.ai/recordings/xPGDgbjahr1RKd5XzECV?onlyRecording=1",
+  detailedWorkflow: ["Lead sends a message via Instagram, Facebook Messenger, or SMS", "Agent AVA greets them instantly inside GoHighLevel Conversations", "AI asks qualifying questions to identify need and urgency", "Qualified leads are offered available appointment slots", "Appointment is booked directly into the GHL calendar", "Hot prospects are tagged and routed to the sales team for follow-up", "Automated reminders and nurture sequences keep the opportunity warm", "All conversation history is tracked in the contact record for full visibility"]
 }, {
   title: "AI-Powered Content Creation Workflow",
   description: "Marketing Agency: Automated content creation pipeline that transforms Google Drive files into AI-generated content distributed across multiple social platforms.",
