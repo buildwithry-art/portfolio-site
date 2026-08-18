@@ -19,11 +19,23 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'ubuntu': ['Ubuntu', 'sans-serif'],
-				'colfax': ['Inter', 'sans-serif'], // Using Inter as Colfax alternative
-				'futuristic': ['Orbitron', 'sans-serif'], // For "Build with RY" logo
-				'anonymous': ['Anonymous Pro', 'monospace'], // For typewriter effect
+				'ak': ['Neue Haas Grotesk Display', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				'gs': ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
+				'ubuntu': ['Inter', 'ui-sans-serif', 'sans-serif'],
+				'colfax': ['Inter', 'ui-sans-serif', 'sans-serif'],
+				'futuristic': ['Inter', 'ui-sans-serif', 'sans-serif'],
+				'anonymous': ['Inter', 'ui-sans-serif', 'sans-serif'],
 			},
+			fontSize: {
+				'caption': ['12px', { lineHeight: '1.5' }],
+				'body-sm': ['14px', { lineHeight: '1.4' }],
+				'body': ['18px', { lineHeight: '1.33' }],
+				'subheading': ['20px', { lineHeight: '1.1' }],
+				'heading': ['58px', { lineHeight: '1' }],
+				'heading-lg': ['72px', { lineHeight: '0.9' }],
+				'display': ['216px', { lineHeight: '0.8' }],
+			},
+
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
