@@ -1,104 +1,86 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Lightbulb } from "lucide-react";
-import automationIcon from "@/assets/automation-icon.png";
-
 const adrianPhoto = `${import.meta.env.BASE_URL}lovable-uploads/892fb2d8-1fb5-4b9c-9831-7db3e194f5e9.png`;
 
 const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center px-4 pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left">
-            <div className="mb-8">
-              <h1 className="font-ubuntu text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                I help businesses 
-                <span className="text-gradient block">
-                  automate workflows
-                </span>
-                and scale effortlessly
-              </h1>
-              
-              <p className="font-colfax text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Specialist in <span className="font-semibold text-primary">GoHighLevel</span>, <span className="font-semibold text-primary">Zapier</span>, <span className="font-semibold text-primary">Make</span>, and <span className="font-semibold text-primary">n8n</span> — building AI-powered workflows that cut costs, eliminate errors, and drive revenue 24/7.
-              </p>
+  const scrollTo = (selector: string) => {
+    document.querySelector(selector)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden">
+      {/* Locale-switcher-style meta row */}
+      <div className="flex justify-between px-4">
+        <span className="label text-muted-foreground">Automation Studio / GHL · n8n · VAPI</span>
+        <span className="label text-muted-foreground">PH / US / WW</span>
+      </div>
+
+      {/* Display headline wall — bleeds past the viewport edges by design */}
+      <div className="relative">
+        <h1 className="display-wall px-4">
+          <span className="block whitespace-nowrap -ml-[2vw]">Automate</span>
+          <span className="block whitespace-nowrap ml-[6vw] text-muted-foreground">Workflows</span>
+          <span className="block whitespace-nowrap -ml-[1vw]">Scale</span>
+        </h1>
+
+        {/* Portrait as the single sculptural object, overlapping the type */}
+        <img
+          src={adrianPhoto}
+          alt="Adrian Agdan, automation specialist"
+          className="pointer-events-none absolute right-0 bottom-0 hidden lg:block w-[30vw] max-w-[420px] object-contain grayscale mix-blend-luminosity opacity-90"
+        />
+      </div>
+
+      {/* Gallery wall label + actions */}
+      <div className="px-4 grid gap-8 lg:grid-cols-[minmax(0,32ch)_1fr] lg:items-end">
+        <p className="caption text-muted-foreground max-w-[36ch]">
+          Automation and AI systems design studio. GoHighLevel builds, n8n and Make workflows,
+          voice and conversational AI receptionists for service businesses.
+        </p>
+
+        <div className="flex flex-wrap items-end justify-start lg:justify-end gap-8">
+          <div className="flex gap-8">
+            <div>
+              <div className="section-heading">500+</div>
+              <div className="label text-muted-foreground mt-2">Hours saved</div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <Button size="lg" className="text-lg px-8 py-6 hover-lift bg-primary hover:bg-primary-hover text-primary-foreground font-semibold" onClick={() => {
-              const element = document.querySelector("#contact");
-              if (element) {
-                element.scrollIntoView({
-                  behavior: 'smooth'
-                });
-              }
-            }}>
-                Work With Me
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 hover-lift border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold" onClick={() => window.open('https://calendly.com/buildwithry/30min', '_blank')}>
-                Book a Free Strategy Call
-                <Calendar className="ml-2 h-5 w-5" />
-              </Button>
+            <div>
+              <div className="section-heading">95%</div>
+              <div className="label text-muted-foreground mt-2">Error reduction</div>
             </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto lg:mx-0">
-              <div className="text-center lg:text-left">
-                <h3 className="text-3xl font-bold text-primary mb-1">500+</h3>
-                <p className="text-muted-foreground font-medium">Hours Saved</p>
-              </div>
-              <div className="text-center lg:text-left">
-                <h3 className="text-3xl font-bold text-primary mb-1">95%</h3>
-                <p className="text-muted-foreground font-medium">Error Reduction</p>
-              </div>
-              <div className="text-center lg:text-left">
-                <h3 className="text-3xl font-bold text-primary mb-1">$2M+</h3>
-                <p className="text-muted-foreground font-medium">Revenue Generated</p>
-              </div>
+            <div>
+              <div className="section-heading">$2M+</div>
+              <div className="label text-muted-foreground mt-2">Revenue driven</div>
             </div>
           </div>
-          
-          {/* Visual */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative group cursor-pointer">
-              {/* Background decoration */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
-              
-              {/* Main photo container */}
-              <div className="relative overflow-hidden rounded-2xl shadow-strong group-hover:shadow-xl transition-all duration-300 hover-lift">
-                <img src={adrianPhoto} alt="Adrian - Automation Specialist" className="w-96 h-auto object-contain group-hover:scale-105 transition-transform duration-300" />
-                
-                {/* HighLevel Badge */}
-                <div className="absolute top-4 left-4">
-                  <a
-                    href="https://directory.gohighlevel.com/pila/certified-admins/adrian-agdan?from=badge"
-                    title="Find me on HighLevel Directory"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-background/90 backdrop-blur-sm border border-border px-3 py-1.5 shadow-md hover:scale-105 transition-transform duration-300"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-xs font-semibold text-foreground">HighLevel Certified Admin</span>
-                  </a>
-                </div>
-                
-                {/* AHA moment thinking icon */}
-                <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
-                  <div className="relative">
-                    {/* Radiating lines */}
-                    <div className="absolute inset-0 animate-pulse">
-                    </div>
-                    
-                    {/* Main icon container */}
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
+
+          <div className="flex flex-wrap gap-4">
+            <button onClick={() => scrollTo("#contact")} className="flat-action">
+              Work with me
+            </button>
+            <a
+              href="https://calendly.com/buildwithry/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flat-action-ghost"
+            >
+              Book a call
+            </a>
           </div>
         </div>
       </div>
-    </section>;
+
+      <div className="px-4">
+        <a
+          href="https://directory.gohighlevel.com/pila/certified-admins/adrian-agdan?from=badge"
+          title="Find me on HighLevel Directory"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="label text-muted-foreground hover:text-foreground transition-colors"
+        >
+          HighLevel Certified Admin
+        </a>
+      </div>
+    </section>
+  );
 };
+
 export default Hero;
