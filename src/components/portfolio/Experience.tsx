@@ -1,7 +1,3 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin } from "lucide-react";
-
 const experiences = [
   {
     title: "GHL Specialist & Automation Consultant",
@@ -68,63 +64,37 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-4 bg-muted/50">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="section-heading mb-4">
-            Work Experience
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Building automation solutions across diverse industries
-          </p>
-        </div>
-        
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <Card key={index} className="glass hover:scale-[1.02] smooth-animation">
-              <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <CardTitle className="text-xl md:text-2xl">{exp.title}</CardTitle>
-                    <CardDescription className="text-lg font-semibold text-primary">
-                      {exp.company}
-                    </CardDescription>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <Badge variant="secondary" className="w-fit">
-                      {exp.type}
-                    </Badge>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      {exp.period}
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      {exp.location}
-                    </div>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-4">
-                  {exp.achievements.map((achievement, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech, idx) => (
-                    <Badge key={idx} variant="outline" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+    <section id="experience" className="py-24 md:py-32 px-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-4 mb-16">
+        <h2 className="section-heading">Experience</h2>
+        <span className="label text-muted-foreground">03 / Track record</span>
+      </div>
+
+      <div className="hairline">
+        {experiences.map((exp, index) => (
+          <div key={index} className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:gap-16 py-12 border-b border-border">
+            <div>
+              <h3 className="archive-title">{exp.company}</h3>
+              <p className="label text-muted-foreground mt-4">{exp.title}</p>
+              <div className="flex flex-wrap gap-6 mt-4">
+                <span className="label text-muted-foreground">{exp.period}</span>
+                <span className="label text-muted-foreground">{exp.location}</span>
+                <span className="label text-muted-foreground">{exp.type}</span>
+              </div>
+            </div>
+
+            <div>
+              <ul className="space-y-2">
+                {exp.achievements.map((achievement, idx) => (
+                  <li key={idx} className="caption text-muted-foreground normal-case tracking-normal">
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
+              <p className="label text-muted-foreground mt-6">{exp.technologies.join(" / ")}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

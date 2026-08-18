@@ -1,6 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const BASE = import.meta.env.BASE_URL;
 
 const skillCategories = [
@@ -30,88 +27,66 @@ const skillCategories = [
   }
 ];
 
-const toolLogos: Array<{ name: string; logo: string; isImage?: boolean; color?: string }> = [
-  { name: "Make", logo: `${BASE}lovable-uploads/f15c7435-1271-49b9-bdad-f8a3d32a0d96.png`, isImage: true },
-  { name: "Zapier", logo: `${BASE}lovable-uploads/30c27be1-6af6-4eab-90b2-91c98060f650.png`, isImage: true },
-  { name: "GoHighLevel", logo: `${BASE}lovable-uploads/0340a356-7341-4d91-862e-5c9c3cab01a6.png`, isImage: true },
-  { name: "n8n", logo: `${BASE}lovable-uploads/c63b961b-4b50-4cb6-b67f-81379d4ddf08.png`, isImage: true },
-  { name: "Supabase", logo: `${BASE}lovable-uploads/9350b8c6-c661-4b02-83e9-104503868b53.png`, isImage: true },
-  { name: "Airtable", logo: `${BASE}lovable-uploads/07fe4fb3-fe96-49d0-b139-0661d025aac4.png`, isImage: true },
-  { name: "Shopify", logo: `${BASE}lovable-uploads/1ff04e66-8787-43cc-8330-a31015e5fb5f.png`, isImage: true },
-  { name: "Stripe", logo: `${BASE}lovable-uploads/b5921b0a-1425-4503-9614-12d902642cf8.png`, isImage: true },
-  { name: "Twilio", logo: `${BASE}lovable-uploads/5e34f1ab-63df-40f7-a73c-06850eeaefc7.png`, isImage: true },
-  { name: "Canva", logo: `${BASE}lovable-uploads/b69b54a6-4046-48ad-b1c8-1709499985e7.png`, isImage: true },
-  { name: "Slack", logo: `${BASE}lovable-uploads/729b14df-7b5c-478f-a162-f79980da1ac1.png`, isImage: true },
-  { name: "Asana", logo: `${BASE}lovable-uploads/0430b2e9-867b-484e-b727-9f05b427238a.png`, isImage: true }
+const toolLogos: Array<{ name: string; logo: string }> = [
+  { name: "Make", logo: `${BASE}lovable-uploads/f15c7435-1271-49b9-bdad-f8a3d32a0d96.png` },
+  { name: "Zapier", logo: `${BASE}lovable-uploads/30c27be1-6af6-4eab-90b2-91c98060f650.png` },
+  { name: "GoHighLevel", logo: `${BASE}lovable-uploads/0340a356-7341-4d91-862e-5c9c3cab01a6.png` },
+  { name: "n8n", logo: `${BASE}lovable-uploads/c63b961b-4b50-4cb6-b67f-81379d4ddf08.png` },
+  { name: "Supabase", logo: `${BASE}lovable-uploads/9350b8c6-c661-4b02-83e9-104503868b53.png` },
+  { name: "Airtable", logo: `${BASE}lovable-uploads/07fe4fb3-fe96-49d0-b139-0661d025aac4.png` },
+  { name: "Shopify", logo: `${BASE}lovable-uploads/1ff04e66-8787-43cc-8330-a31015e5fb5f.png` },
+  { name: "Stripe", logo: `${BASE}lovable-uploads/b5921b0a-1425-4503-9614-12d902642cf8.png` },
+  { name: "Twilio", logo: `${BASE}lovable-uploads/5e34f1ab-63df-40f7-a73c-06850eeaefc7.png` },
+  { name: "Canva", logo: `${BASE}lovable-uploads/b69b54a6-4046-48ad-b1c8-1709499985e7.png` },
+  { name: "Slack", logo: `${BASE}lovable-uploads/729b14df-7b5c-478f-a162-f79980da1ac1.png` },
+  { name: "Asana", logo: `${BASE}lovable-uploads/0430b2e9-867b-484e-b727-9f05b427238a.png` }
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-4 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="section-heading mb-4">
-            Skills and Tools
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Tools and platforms I use to deliver exceptional automation solutions
-          </p>
-        </div>
+    <section id="skills" className="py-24 md:py-32 overflow-hidden">
+      <div className="px-4 flex flex-wrap items-baseline justify-between gap-4 mb-16">
+        <h2 className="section-heading">Stack</h2>
+        <span className="label text-muted-foreground">02 / Tools & platforms</span>
+      </div>
 
-        {/* Animated Tools Logos */}
-        <div className="mb-16">
-          <div className="relative overflow-hidden py-8">
-            <div className="flex animate-scroll-right space-x-6 w-max">
-              {[...toolLogos, ...toolLogos].map((tool, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 group cursor-pointer"
-                  title={tool.name}
-                >
-                  <div className="bg-white rounded-2xl p-4 hover:shadow-xl smooth-animation hover:scale-110 border border-border/60 flex flex-col items-center justify-center gap-2 w-32 h-32">
-                    <div className="flex-1 flex items-center justify-center w-full">
-                      <img
-                        src={tool.logo}
-                        alt={`${tool.name} logo`}
-                        loading="lazy"
-                        className="max-h-14 max-w-[80%] object-contain"
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).style.display = 'none';
-                        }}
-                      />
-                    </div>
-                    <span className="text-xs font-semibold text-gray-700 truncate max-w-full">
-                      {tool.name}
-                    </span>
-                  </div>
-                </div>
-              ))}
+      {/* Full-bleed marquee of tool marks — flat, achromatic, no radius */}
+      <div className="relative py-8">
+        <div className="flex animate-scroll-right w-max">
+          {[...toolLogos, ...toolLogos].map((tool, index) => (
+            <div
+              key={index}
+              title={tool.name}
+              className="flex-shrink-0 w-40 h-32 flex flex-col items-center justify-center gap-3 border-l border-border"
+            >
+              <img
+                src={tool.logo}
+                alt={`${tool.name} logo`}
+                loading="lazy"
+                className="max-h-10 max-w-[60%] object-contain grayscale brightness-0 invert opacity-80"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                }}
+              />
+              <span className="label text-muted-foreground">{tool.name}</span>
             </div>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="glass hover:scale-105 smooth-animation">
-              <CardHeader>
-                <CardTitle className="text-lg text-primary">{category.category}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, idx) => (
-                    <Badge 
-                      key={idx} 
-                      variant="secondary" 
-                      className="hover:bg-primary hover:text-primary-foreground smooth-animation cursor-default"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           ))}
         </div>
+      </div>
+
+      <div className="px-4 mt-16 hairline">
+        {skillCategories.map((category, index) => (
+          <div
+            key={index}
+            className="grid gap-2 md:grid-cols-[4rem_minmax(0,28ch)_1fr] md:gap-8 py-8 border-b border-border"
+          >
+            <span className="label text-muted-foreground">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <h3 className="text-subheading uppercase tracking-tight">{category.category}</h3>
+            <p className="caption text-muted-foreground">{category.skills.join(" / ")}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
