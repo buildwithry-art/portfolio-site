@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="'Comic Sans MS','Segoe Print',cursive">
+  <defs>
+    <filter id="sketch4"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
+    <marker id="arrowA" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="600" fill="#f8f6f0"/>
+  <text x="40" y="50" fill="#1e1e1e" font-size="26" font-weight="700">ASMR AI Video Creator (n8n)</text>
+
+  <g fill="none" stroke="#1e1e1e" stroke-width="2.5" filter="url(#sketch4)" text-anchor="middle">
+    <rect x="50" y="260" width="150" height="80" rx="6"/>
+    <rect x="260" y="260" width="170" height="80" rx="6"/>
+    <rect x="490" y="180" width="180" height="80" rx="6"/>
+    <rect x="490" y="340" width="180" height="80" rx="6"/>
+    <rect x="740" y="140" width="170" height="70" rx="6"/>
+    <rect x="740" y="260" width="170" height="70" rx="6"/>
+    <rect x="740" y="380" width="170" height="70" rx="6"/>
+  </g>
+
+  <g fill="#1e1e1e" font-size="14" text-anchor="middle" font-weight="700">
+    <text x="125" y="300">Daily cron</text>
+    <text x="345" y="295">Pick queued topic</text>
+    <text x="580" y="215">Gemini writes</text>
+    <text x="580" y="235" font-size="12" font-weight="400">prompt + title</text>
+    <text x="580" y="375">Veo 3 generates</text>
+    <text x="580" y="395" font-size="12" font-weight="400">8s video, polled</text>
+    <text x="825" y="170">YouTube upload</text>
+    <text x="825" y="290">Facebook Reels</text>
+    <text x="825" y="410">Sheet updated</text>
+    <text x="825" y="430" font-size="11" font-weight="400">status = Posted</text>
+  </g>
+  <text x="345" y="315" fill="#495057" font-size="11">from a Sheet queue</text>
+
+  <g filter="url(#sketch4)" stroke="#ae3ec9" stroke-width="2.5" fill="none" marker-end="url(#arrowA)">
+    <path d="M200 300 L258 300"/>
+    <path d="M430 285 L488 235"/>
+    <path d="M430 315 L488 370"/>
+    <path d="M670 220 L738 190"/>
+    <path d="M670 380 L738 405"/>
+  </g>
+  <g filter="url(#sketch4)" stroke="#e8590c" stroke-width="2.5" fill="none" marker-end="url(#arrowA)">
+    <path d="M910 205 L910 258"/>
+    <path d="M910 330 L910 378"/>
+  </g>
+
+  <text x="500" y="480" fill="#e03131" font-size="13" text-anchor="middle" font-style="italic">error branch: failed Gemini prompt -&gt; email alert</text>
+  <text x="500" y="560" fill="#495057" font-size="14" text-anchor="middle" font-style="italic">script -&gt; video -&gt; multi-platform publish, fully automated</text>
+</svg>

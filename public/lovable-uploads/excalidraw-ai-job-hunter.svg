@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="'Comic Sans MS','Segoe Print',cursive">
+  <defs>
+    <filter id="sketch3"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
+    <marker id="arrowJ" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#1e1e1e" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="600" fill="#f8f6f0"/>
+  <text x="40" y="50" fill="#1e1e1e" font-size="26" font-weight="700">AI Job Hunter (n8n)</text>
+
+  <g fill="none" stroke="#1e1e1e" stroke-width="2.5" filter="url(#sketch3)" text-anchor="middle">
+    <rect x="50" y="200" width="170" height="90" rx="6"/>
+    <rect x="50" y="340" width="170" height="80" rx="6"/>
+    <rect x="290" y="270" width="180" height="90" rx="6"/>
+    <rect x="540" y="270" width="180" height="90" rx="6"/>
+    <rect x="790" y="190" width="160" height="80" rx="6"/>
+    <rect x="790" y="350" width="160" height="80" rx="6"/>
+  </g>
+
+  <g fill="#1e1e1e" font-size="15" text-anchor="middle" font-weight="700">
+    <text x="135" y="240">Fetch sources</text>
+    <text x="135" y="385">Dedupe + filter</text>
+    <text x="380" y="310">Gemini score</text>
+    <text x="630" y="310">Claude tailor</text>
+    <text x="870" y="230">Slack alert</text>
+    <text x="870" y="390">Google Sheet</text>
+  </g>
+  <g fill="#495057" font-size="12" text-anchor="middle">
+    <text x="135" y="260">Upwork, RemoteOK,</text>
+    <text x="135" y="275">OnlineJobs, more</text>
+    <text x="135" y="400">skip repeats +</text>
+    <text x="135" y="413">bad matches</text>
+    <text x="380" y="330">relevance 0-10</text>
+    <text x="630" y="330">resume + letter</text>
+    <text x="870" y="250">one per match</text>
+    <text x="870" y="410">full log, every job</text>
+  </g>
+  <text x="630" y="285" fill="#e8590c" font-size="12" text-anchor="middle" font-weight="700">gated &gt;= 8/10</text>
+
+  <g filter="url(#sketch3)" stroke="#2f9e44" stroke-width="2.5" fill="none" marker-end="url(#arrowJ)">
+    <path d="M220 260 L288 300"/>
+    <path d="M220 380 L288 335"/>
+    <path d="M470 315 L538 315"/>
+    <path d="M720 300 L788 240"/>
+    <path d="M720 330 L788 385"/>
+  </g>
+
+  <text x="500" y="560" fill="#495057" font-size="14" text-anchor="middle" font-style="italic">fetch -&gt; score -&gt; tailor -&gt; deliver, gated for cost control</text>
+</svg>
